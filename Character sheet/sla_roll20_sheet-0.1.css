@@ -1,0 +1,83 @@
+.sheet-characteristic {
+    width: 50px;
+}
+.sheet-skillrank {
+    width: 50px;
+}
+.sheet-skillattribute {
+    width: 100px;
+}
+.sheet-skillmax {
+    width: 50px;
+    border: none;
+    background: #fff;
+    text-align: center;
+}
+td {
+    padding: 3px 5px;
+}
+.sheet-skillist_name {
+    width: 200px;
+}
+.sheet-skillist_rank {
+    width: 60px;
+}
+.sheet-skillist_characteristic {
+    width: 60px;
+}
+.sheet-skillist_max {
+    width: 100px;
+}
+.sheet-skillist_roll {
+    width: 60px;
+}
+.sheet-skill_column {
+    width: 325px;
+    display: inline-block;
+}
+div.sheet-namecontainer {
+    height: 1.5em;
+}
+div.sheet-tab-content {
+    display: none;
+    border-top: 1px solid #444;
+    margin-top: 2px;
+}
+
+input.sheet-tab-summary:checked ~ div.sheet-tab-summary,
+input.sheet-tab-skills:checked ~ div.sheet-tab-skills {
+    display: block;
+}
+input.sheet-tab-new {
+    cursor: pointer;
+    height: 20px;
+    opacity: 0;
+    position: relative;
+    width: 120px;
+    z-index: 9999;
+}
+
+span.sheet-tab-new {
+    border: 1px solid #51597f;
+    background-color: white;
+    border-radius: 4px;
+    color: #51597f;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    height: 20px;
+    margin-left: -122px;
+    position: relative;
+    text-align: center;
+    line-height: 20px;
+    width: 120px;
+    padding: 3px 5px;
+}
+
+input.sheet-tab-new:checked + span {
+    background: #51597f none repeat scroll 0 0;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    /*color: #692927;*/
+}
