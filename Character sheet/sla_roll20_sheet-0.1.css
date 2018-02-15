@@ -34,6 +34,7 @@ td {
 .sheet-skill_column {
     width: 325px;
     display: inline-block;
+    vertical-align: top;
 }
 div.sheet-namecontainer {
     height: 1.5em;
@@ -99,4 +100,41 @@ input.sheet-tab-new:checked + span {
     font-weight: bold;
     color: white;
     /*color: #692927;*/
+}
+
+.sheet-weapon_name {
+    width: 100px;
+}
+.sheet-weapon_size {
+    width: 30px;
+}
+.sheet-weapon_calibre {
+    width: 70px;
+}
+.sheet-weapon_pen {
+    width: 30px;
+}
+.sheet-weapon_dmg {
+    width: 30px;
+}
+.sheet-weapon_ad {
+    width: 30px;
+}
+.sheet-weapon_rof {
+    width: 50px;
+}
+.sheet-weapon_range {
+    width: 40px;
+}
+.sheet-weapon_ammo {
+    width: 40px;
+}
+.sheet-weapon_clips {
+    width: 40px;
+}
+.sheet-weapon_recoil {
+    width: 40px;
+}
+.sheet-weapon_ammotype {
+    width: 100px;
 }

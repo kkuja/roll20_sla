@@ -45,7 +45,7 @@
             </tbody>
         </table>
     </div>
-    
+
     <div class='sheet-data_container'>
         <h3>Hitpoints and armor</h3>
 
@@ -125,41 +125,305 @@
     </div>
 
     <div class='sheet-data_container'>
-        <h3>Skills</h3>
-        <table>
+        <table class='sheet-weapons'>
             <tbody>
                 <tr>
-                    <th class='sheet-skillist_name'>Skill</th>
-                    <th class='sheet-skillist_rank'>Rank</th>
-                    <th class='sheet-skillist_characteristic'>Characteristic</th>
-                    <th class='sheet-skillist_max'>Max rank</th>
-                    <th class='sheet-skillist_roll'>Roll</th>
+                    <th>Weapon</th>
+                    <th>Size</th>
+                    <th>Calibre/type</th>
+                    <th>PEN</th>
+                    <th>Damage</th>
+                    <th>AD</th>
+                    <th>R.O.F</th>
+                    <th>Range</th>
+                    <th>Ammo</th>
+                    <th>Clips</th>
+                    <th>Recoil</th>
+                    <th>ammo type</th>
+                </tr>
+                <tr>
+                    <td><input type='text' name='attr_weapon_1_name' class='sheet-weapon_name'></td>
+                    <td><input type='text' name='attr_weapon_1_size' class='sheet-weapon_size'></td>
+                    <td><input type='text' name='attr_weapon_1_calibre' class='sheet-weapon_calibre'></td>
+                    <td><input type='text' name='attr_weapon_1_pen' class='sheet-weapon_pen'></td>
+                    <td><input type='text' name='attr_weapon_1_dmg' class='sheet-weapon_dmg'></td>
+                    <td><input type='text' name='attr_weapon_1_ad' class='sheet-weapon_ad'></td>
+                    <td><input type='text' name='attr_weapon_1_rof' class='sheet-weapon_rof'></td>
+                    <td><input type='text' name='attr_weapon_1_range' class='sheet-weapon_range'> m</td>
+                    <td><input type='text' name='attr_weapon_1_ammo' class='sheet-weapon_ammo'></td>
+                    <td><input type='text' name='attr_weapon_1_clips' class='sheet-weapon_clips'></td>
+                    <td><input type='text' name='attr_weapon_1_recoil' class='sheet-weapon_recoil'></td>
+                    <!--                    <td><input type='text' name='attr_weapon_1_ammotype' class='sheet-weapon_ammotype'></td>-->
+                    <td>
+                        <select name='attr_weapon_1_skill' class='sheet-skillattribute'>
+                            <option value='@{rank_Unarmed}'>Unarmed</option>
+                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
+                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
+                            <option value='@{rank_Club_1h}'>Club 1h</option>
+                            <option value='@{rank_Club_2h}'>Club 2h</option>
+                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
+                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
+                            <option value='@{rank_Polearm}'>Polearm</option>
+                            <option value='@{rank_Axe}'>Axe</option>
+                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
+                            <option value='@{rank_Martial_arts}'>Martial arts</option>
+                            <option value='@{rank_Pistol}'>Pistol</option>
+                            <option value='@{rank_Rifle}'>Rifle</option>
+                            <option value='@{rank_Archery}'>Archery</option>
+                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
+                            <option value='@{rank_Flail}'>Flail</option>
+                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
+                        </select>
+                        <button type='roll' name='roll_weapon_1' value='I attack with @{weapon_1_name} (Damage: @{weapon_1_dmg}, PEN: @{weapon_1_pen}, AD: @{weapon_1_ad})\n/roll 2d10 + @{weapon_1_skill}'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type='text' name='attr_weapon_2_name' class='sheet-weapon_name'></td>
+                    <td><input type='text' name='attr_weapon_2_size' class='sheet-weapon_size'></td>
+                    <td><input type='text' name='attr_weapon_2_calibre' class='sheet-weapon_calibre'></td>
+                    <td><input type='text' name='attr_weapon_2_pen' class='sheet-weapon_pen'></td>
+                    <td><input type='text' name='attr_weapon_2_dmg' class='sheet-weapon_dmg'></td>
+                    <td><input type='text' name='attr_weapon_2_ad' class='sheet-weapon_ad'></td>
+                    <td><input type='text' name='attr_weapon_2_rof' class='sheet-weapon_rof'></td>
+                    <td><input type='text' name='attr_weapon_2_range' class='sheet-weapon_range'> m</td>
+                    <td><input type='text' name='attr_weapon_2_ammo' class='sheet-weapon_ammo'></td>
+                    <td><input type='text' name='attr_weapon_2_clips' class='sheet-weapon_clips'></td>
+                    <td><input type='text' name='attr_weapon_2_recoil' class='sheet-weapon_recoil'></td>
+                    <td>
+                        <select name='attr_weapon_2_skill' class='sheet-skillattribute'>
+                            <option value='@{rank_Unarmed}'>Unarmed</option>
+                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
+                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
+                            <option value='@{rank_Club_1h}'>Club 1h</option>
+                            <option value='@{rank_Club_2h}'>Club 2h</option>
+                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
+                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
+                            <option value='@{rank_Polearm}'>Polearm</option>
+                            <option value='@{rank_Axe}'>Axe</option>
+                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
+                            <option value='@{rank_Martial_arts}'>Martial arts</option>
+                            <option value='@{rank_Pistol}'>Pistol</option>
+                            <option value='@{rank_Rifle}'>Rifle</option>
+                            <option value='@{rank_Archery}'>Archery</option>
+                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
+                            <option value='@{rank_Flail}'>Flail</option>
+                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
+                        </select>
+                        <button type='roll' name='roll_weapon_2' value='I attack with @{weapon_2_name} (Damage: @{weapon_2_dmg}, PEN: @{weapon_2_pen}, AD: @{weapon_2_ad})\n/roll 2d10 + @{weapon_2_skill}'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type='text' name='attr_weapon_3_name' class='sheet-weapon_name'></td>
+                    <td><input type='text' name='attr_weapon_3_size' class='sheet-weapon_size'></td>
+                    <td><input type='text' name='attr_weapon_3_calibre' class='sheet-weapon_calibre'></td>
+                    <td><input type='text' name='attr_weapon_3_pen' class='sheet-weapon_pen'></td>
+                    <td><input type='text' name='attr_weapon_3_dmg' class='sheet-weapon_dmg'></td>
+                    <td><input type='text' name='attr_weapon_3_ad' class='sheet-weapon_ad'></td>
+                    <td><input type='text' name='attr_weapon_3_rof' class='sheet-weapon_rof'></td>
+                    <td><input type='text' name='attr_weapon_3_range' class='sheet-weapon_range'> m</td>
+                    <td><input type='text' name='attr_weapon_3_ammo' class='sheet-weapon_ammo'></td>
+                    <td><input type='text' name='attr_weapon_3_clips' class='sheet-weapon_clips'></td>
+                    <td><input type='text' name='attr_weapon_3_recoil' class='sheet-weapon_recoil'></td>
+                    <td>
+                        <select name='attr_weapon_3_skill' class='sheet-skillattribute'>
+                            <option value='@{rank_Unarmed}'>Unarmed</option>
+                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
+                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
+                            <option value='@{rank_Club_1h}'>Club 1h</option>
+                            <option value='@{rank_Club_2h}'>Club 2h</option>
+                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
+                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
+                            <option value='@{rank_Polearm}'>Polearm</option>
+                            <option value='@{rank_Axe}'>Axe</option>
+                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
+                            <option value='@{rank_Martial_arts}'>Martial arts</option>
+                            <option value='@{rank_Pistol}'>Pistol</option>
+                            <option value='@{rank_Rifle}'>Rifle</option>
+                            <option value='@{rank_Archery}'>Archery</option>
+                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
+                            <option value='@{rank_Flail}'>Flail</option>
+                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
+                        </select>
+                        <button type='roll' name='roll_weapon_3' value='I attack with @{weapon_3_name} (Damage: @{weapon_3_dmg}, PEN: @{weapon_3_pen}, AD: @{weapon_3_ad})\n/roll 2d10 + @{weapon_3_skill}'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type='text' name='attr_weapon_4_name' class='sheet-weapon_name'></td>
+                    <td><input type='text' name='attr_weapon_4_size' class='sheet-weapon_size'></td>
+                    <td><input type='text' name='attr_weapon_4_calibre' class='sheet-weapon_calibre'></td>
+                    <td><input type='text' name='attr_weapon_4_pen' class='sheet-weapon_pen'></td>
+                    <td><input type='text' name='attr_weapon_4_dmg' class='sheet-weapon_dmg'></td>
+                    <td><input type='text' name='attr_weapon_4_ad' class='sheet-weapon_ad'></td>
+                    <td><input type='text' name='attr_weapon_4_rof' class='sheet-weapon_rof'></td>
+                    <td><input type='text' name='attr_weapon_4_range' class='sheet-weapon_range'> m</td>
+                    <td><input type='text' name='attr_weapon_4_ammo' class='sheet-weapon_ammo'></td>
+                    <td><input type='text' name='attr_weapon_4_clips' class='sheet-weapon_clips'></td>
+                    <td><input type='text' name='attr_weapon_4_recoil' class='sheet-weapon_recoil'></td>
+                    <td>
+                        <select name='attr_weapon_4_skill' class='sheet-skillattribute'>
+                            <option value='@{rank_Unarmed}'>Unarmed</option>
+                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
+                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
+                            <option value='@{rank_Club_1h}'>Club 1h</option>
+                            <option value='@{rank_Club_2h}'>Club 2h</option>
+                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
+                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
+                            <option value='@{rank_Polearm}'>Polearm</option>
+                            <option value='@{rank_Axe}'>Axe</option>
+                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
+                            <option value='@{rank_Martial_arts}'>Martial arts</option>
+                            <option value='@{rank_Pistol}'>Pistol</option>
+                            <option value='@{rank_Rifle}'>Rifle</option>
+                            <option value='@{rank_Archery}'>Archery</option>
+                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
+                            <option value='@{rank_Flail}'>Flail</option>
+                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
+                        </select>
+                        <button type='roll' name='roll_weapon_4' value='I attack with @{weapon_4_name} (Damage: @{weapon_4_dmg}, PEN: @{weapon_4_pen}, AD: @{weapon_4_ad})\n/roll 2d10 + @{weapon_4_skill}'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type='text' name='attr_weapon_5_name' class='sheet-weapon_name'></td>
+                    <td><input type='text' name='attr_weapon_5_size' class='sheet-weapon_size'></td>
+                    <td><input type='text' name='attr_weapon_5_calibre' class='sheet-weapon_calibre'></td>
+                    <td><input type='text' name='attr_weapon_5_pen' class='sheet-weapon_pen'></td>
+                    <td><input type='text' name='attr_weapon_5_dmg' class='sheet-weapon_dmg'></td>
+                    <td><input type='text' name='attr_weapon_5_ad' class='sheet-weapon_ad'></td>
+                    <td><input type='text' name='attr_weapon_5_rof' class='sheet-weapon_rof'></td>
+                    <td><input type='text' name='attr_weapon_5_range' class='sheet-weapon_range'> m</td>
+                    <td><input type='text' name='attr_weapon_5_ammo' class='sheet-weapon_ammo'></td>
+                    <td><input type='text' name='attr_weapon_5_clips' class='sheet-weapon_clips'></td>
+                    <td><input type='text' name='attr_weapon_5_recoil' class='sheet-weapon_recoil'></td>
+                    <td>
+                        <select name='attr_weapon_5_skill' class='sheet-skillattribute'>
+                            <option value='@{rank_Unarmed}'>Unarmed</option>
+                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
+                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
+                            <option value='@{rank_Club_1h}'>Club 1h</option>
+                            <option value='@{rank_Club_2h}'>Club 2h</option>
+                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
+                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
+                            <option value='@{rank_Polearm}'>Polearm</option>
+                            <option value='@{rank_Axe}'>Axe</option>
+                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
+                            <option value='@{rank_Martial_arts}'>Martial arts</option>
+                            <option value='@{rank_Pistol}'>Pistol</option>
+                            <option value='@{rank_Rifle}'>Rifle</option>
+                            <option value='@{rank_Archery}'>Archery</option>
+                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
+                            <option value='@{rank_Flail}'>Flail</option>
+                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
+                        </select>
+                        <button type='roll' name='roll_weapon_5' value='I attack with @{weapon_5_name} (Damage: @{weapon_5_dmg}, PEN: @{weapon_5_pen}, AD: @{weapon_5_ad})\n/roll 2d10 + @{weapon_5_skill}'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type='text' name='attr_weapon_6_name' class='sheet-weapon_name'></td>
+                    <td><input type='text' name='attr_weapon_6_size' class='sheet-weapon_size'></td>
+                    <td><input type='text' name='attr_weapon_6_calibre' class='sheet-weapon_calibre'></td>
+                    <td><input type='text' name='attr_weapon_6_pen' class='sheet-weapon_pen'></td>
+                    <td><input type='text' name='attr_weapon_6_dmg' class='sheet-weapon_dmg'></td>
+                    <td><input type='text' name='attr_weapon_6_ad' class='sheet-weapon_ad'></td>
+                    <td><input type='text' name='attr_weapon_6_rof' class='sheet-weapon_rof'></td>
+                    <td><input type='text' name='attr_weapon_6_range' class='sheet-weapon_range'> m</td>
+                    <td><input type='text' name='attr_weapon_6_ammo' class='sheet-weapon_ammo'></td>
+                    <td><input type='text' name='attr_weapon_6_clips' class='sheet-weapon_clips'></td>
+                    <td><input type='text' name='attr_weapon_6_recoil' class='sheet-weapon_recoil'></td>
+                    <td>
+                        <select name='attr_weapon_6_skill' class='sheet-skillattribute'>
+                            <option value='@{rank_Unarmed}'>Unarmed</option>
+                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
+                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
+                            <option value='@{rank_Club_1h}'>Club 1h</option>
+                            <option value='@{rank_Club_2h}'>Club 2h</option>
+                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
+                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
+                            <option value='@{rank_Polearm}'>Polearm</option>
+                            <option value='@{rank_Axe}'>Axe</option>
+                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
+                            <option value='@{rank_Martial_arts}'>Martial arts</option>
+                            <option value='@{rank_Pistol}'>Pistol</option>
+                            <option value='@{rank_Rifle}'>Rifle</option>
+                            <option value='@{rank_Archery}'>Archery</option>
+                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
+                            <option value='@{rank_Flail}'>Flail</option>
+                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
+                        </select>
+                        <button type='roll' name='roll_weapon_6' value='I attack with @{weapon_6_name} (Damage: @{weapon_6_dmg}, PEN: @{weapon_6_pen}, AD: @{weapon_6_ad})\n/roll 2d10 + @{weapon_6_skill}'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type='text' name='attr_weapon_7_name' class='sheet-weapon_name'></td>
+                    <td><input type='text' name='attr_weapon_7_size' class='sheet-weapon_size'></td>
+                    <td><input type='text' name='attr_weapon_7_calibre' class='sheet-weapon_calibre'></td>
+                    <td><input type='text' name='attr_weapon_7_pen' class='sheet-weapon_pen'></td>
+                    <td><input type='text' name='attr_weapon_7_dmg' class='sheet-weapon_dmg'></td>
+                    <td><input type='text' name='attr_weapon_7_ad' class='sheet-weapon_ad'></td>
+                    <td><input type='text' name='attr_weapon_7_rof' class='sheet-weapon_rof'></td>
+                    <td><input type='text' name='attr_weapon_7_range' class='sheet-weapon_range'> m</td>
+                    <td><input type='text' name='attr_weapon_7_ammo' class='sheet-weapon_ammo'></td>
+                    <td><input type='text' name='attr_weapon_7_clips' class='sheet-weapon_clips'></td>
+                    <td><input type='text' name='attr_weapon_7_recoil' class='sheet-weapon_recoil'></td>
+                    <td>
+                        <select name='attr_weapon_7_skill' class='sheet-skillattribute'>
+                            <option value='@{rank_Unarmed}'>Unarmed</option>
+                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
+                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
+                            <option value='@{rank_Club_1h}'>Club 1h</option>
+                            <option value='@{rank_Club_2h}'>Club 2h</option>
+                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
+                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
+                            <option value='@{rank_Polearm}'>Polearm</option>
+                            <option value='@{rank_Axe}'>Axe</option>
+                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
+                            <option value='@{rank_Martial_arts}'>Martial arts</option>
+                            <option value='@{rank_Pistol}'>Pistol</option>
+                            <option value='@{rank_Rifle}'>Rifle</option>
+                            <option value='@{rank_Archery}'>Archery</option>
+                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
+                            <option value='@{rank_Flail}'>Flail</option>
+                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
+                        </select>
+                        <button type='roll' name='roll_weapon_7' value='I attack with @{weapon_7_name} (Damage: @{weapon_7_dmg}, PEN: @{weapon_7_pen}, AD: @{weapon_7_ad})\n/roll 2d10 + @{weapon_7_skill}'></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type='text' name='attr_weapon_8_name' class='sheet-weapon_name'></td>
+                    <td><input type='text' name='attr_weapon_8_size' class='sheet-weapon_size'></td>
+                    <td><input type='text' name='attr_weapon_8_calibre' class='sheet-weapon_calibre'></td>
+                    <td><input type='text' name='attr_weapon_8_pen' class='sheet-weapon_pen'></td>
+                    <td><input type='text' name='attr_weapon_8_dmg' class='sheet-weapon_dmg'></td>
+                    <td><input type='text' name='attr_weapon_8_ad' class='sheet-weapon_ad'></td>
+                    <td><input type='text' name='attr_weapon_8_rof' class='sheet-weapon_rof'></td>
+                    <td><input type='text' name='attr_weapon_8_range' class='sheet-weapon_range'> m</td>
+                    <td><input type='text' name='attr_weapon_8_ammo' class='sheet-weapon_ammo'></td>
+                    <td><input type='text' name='attr_weapon_8_clips' class='sheet-weapon_clips'></td>
+                    <td><input type='text' name='attr_weapon_8_recoil' class='sheet-weapon_recoil'></td>
+                    <td>
+                        <select name='attr_weapon_8_skill' class='sheet-skillattribute'>
+                            <option value='@{rank_Unarmed}'>Unarmed</option>
+                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
+                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
+                            <option value='@{rank_Club_1h}'>Club 1h</option>
+                            <option value='@{rank_Club_2h}'>Club 2h</option>
+                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
+                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
+                            <option value='@{rank_Polearm}'>Polearm</option>
+                            <option value='@{rank_Axe}'>Axe</option>
+                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
+                            <option value='@{rank_Martial_arts}'>Martial arts</option>
+                            <option value='@{rank_Pistol}'>Pistol</option>
+                            <option value='@{rank_Rifle}'>Rifle</option>
+                            <option value='@{rank_Archery}'>Archery</option>
+                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
+                            <option value='@{rank_Flail}'>Flail</option>
+                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
+                        </select>
+                        <button type='roll' name='roll_weapon_8' value='I attack with @{weapon_8_name} (Damage: @{weapon_8_dmg}, PEN: @{weapon_8_pen}, AD: @{weapon_8_ad})\n/roll 2d10 + @{weapon_8_skill}'></button>
+                    </td>
                 </tr>
             </tbody>
         </table>
-        <fieldset class='repeating_skills'>
-            <table>
-                <tbody>
-                    <tr>
-                        <td class='sheet-skillist_name'><input type='text' name='attr_skillname1' /></td>
-                        <td class='sheet-skillist_rank'><input type='text' name='attr_skillrank1' class='sheet-skillrank' /></td>
-                        <td class='sheet-skillist_characteristic'><select name='attr_skillattribute1' class='sheet-skillattribute'>
-                            <option value='@{str}'>Strength</option>
-                            <option value='@{dex}'>Dexterity</option>
-                            <option value='@{dia}'>Diagnose</option>
-                            <option value='@{con}'>Concentrantion</option>
-                            <option value='@{cha}'>Charisma</option>
-                            <option value='@{kno}'>Knowledge</option>
-                            <option value='@{phy}'>Physique</option>
-                            <option value='@{coo}'>Cool</option>
-                        </select></td>
-
-                        <td class='sheet-skillist_max'><input type='text' disabled='disabled' name='attr_skillmax1' value='@{skillattribute1}' class='sheet-skillmax' /></td>
-                        <td class='sheet-skillist_roll'><button type='roll' name='roll_skillname1' value='@{character_name} rolls for @{skillname1}\n/roll 2d10+@{skillrank1}'></button></td>
-                    </tr>
-                </tbody>
-            </table><!--Custom skill-->
-        </fieldset><!--Skills-->
     </div>
 </div>
 
@@ -1001,6 +1265,42 @@
                 <td><input type='text' disabled='disabled' name='attr_max-Orienta' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Orienta' value='/roll 2d10+@{rank_Orienta}'></button></td>
             </tr>
+
         </tbody>
     </table>
+    <h3>Custom skills</h3>
+    <table>
+        <tbody>
+            <tr>
+                <th class='sheet-skillist_name'>Skill</th>
+                <th class='sheet-skillist_rank'>Rank</th>
+                <th class='sheet-skillist_characteristic'>Characteristic</th>
+                <th class='sheet-skillist_max'>Max rank</th>
+                <th class='sheet-skillist_roll'>Roll</th>
+            </tr>
+        </tbody>
+    </table>
+    <fieldset class='repeating_skills'>
+        <table>
+            <tbody>
+                <tr>
+                    <td class='sheet-skillist_name'><input type='text' name='attr_skillname1' /></td>
+                    <td class='sheet-skillist_rank'><input type='text' name='attr_skillrank1' class='sheet-skillrank' /></td>
+                    <td class='sheet-skillist_characteristic'><select name='attr_skillattribute1' class='sheet-skillattribute'>
+                        <option value='@{str}'>Strength</option>
+                        <option value='@{dex}'>Dexterity</option>
+                        <option value='@{dia}'>Diagnose</option>
+                        <option value='@{con}'>Concentrantion</option>
+                        <option value='@{cha}'>Charisma</option>
+                        <option value='@{kno}'>Knowledge</option>
+                        <option value='@{phy}'>Physique</option>
+                        <option value='@{coo}'>Cool</option>
+                    </select></td>
+
+                    <td class='sheet-skillist_max'><input type='text' disabled='disabled' name='attr_skillmax1' value='@{skillattribute1}' class='sheet-skillmax' /></td>
+                    <td class='sheet-skillist_roll'><button type='roll' name='roll_skillname1' value='@{character_name} rolls for @{skillname1}\n/roll 2d10+@{skillrank1}'></button></td>
+                </tr>
+            </tbody>
+        </table><!--Custom skill-->
+    </fieldset><!--Skills-->
 </div>
