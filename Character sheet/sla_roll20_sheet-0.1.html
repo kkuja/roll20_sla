@@ -3,7 +3,7 @@
 <input type='radio' name='attr_gmdicepool' class='sheet-player' value='1' checked='checked' style='display:none'>
 <input type='radio' name='attr_gmdicepool' class='sheet-gm' value='2' style='display:none'>
 <div class='sheet-namecontainer'>
-Character Name: <input type='text' name='attr_character_name' style='width: 200px;'/>
+    Character Name: <input type='text' name='attr_character_name' style='width: 200px;'/>
 </div>
 <!-- sheet tabs -->
 <input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-summary sheet-player-sheet" value="1" checked="checked" />
@@ -13,71 +13,154 @@ Character Name: <input type='text' name='attr_character_name' style='width: 200p
 
 <!--Player Sheet Tabs-->
 <div class="sheet-tab-content sheet-tab-summary">
-    <table>
-        <tr>
-            <th>STR</th>
-            <th>DEX</th>
-            <th>DIA</th>
-            <th>CON</th>
-            <th>CHA</th>
-            <th>KNO</th>
-            <th>PHY</th>
-            <th>COO</th>
-            <th style='width: 50px;'> </th>
-            <th>FLUX</th>
-            <th>Formulae</th>
-        </tr>
-        <tr>
-            <td><input type='text' name='attr_str' class='characteristic' /></td>
-            <td><input type='text' name='attr_dex' class='characteristic' /></td>
-            <td><input type='text' name='attr_dia' class='characteristic' /></td>
-            <td><input type='text' name='attr_con' class='characteristic' /></td>
-            <td><input type='text' name='attr_cha' class='characteristic' /></td>
-            <td><input type='text' name='attr_know' class='characteristic' /></td>
-            <td><input type='text' name='attr_phys' class='characteristic' /></td>
-            <td><input type='text' name='attr_cool' class='characteristic' /></td>
-            <td> </td>
-            <td><input type='text' name='attr_flux' class='characteristic' /></td>
-            <td><input type='text' name='attr_formulae' class='characteristic' /></td>
-        </tr>
-    </table>
-
-
-    <h3>Skills</h3>
-    <table>
-        <tbody>
-            <tr>
-                <th class='sheet-skillist_name'>Skill</th>
-                <th class='sheet-skillist_rank'>Rank</th>
-                <th class='sheet-skillist_characteristic'>Characteristic</th>
-                <th class='sheet-skillist_max'>Max rank</th>
-                <th class='sheet-skillist_roll'>Roll</th>
-            </tr>
-        </tbody>
-    </table>
-    <fieldset class='repeating_skills'>
+    <div class='sheet-data_container'>
         <table>
             <tbody>
                 <tr>
-                    <td class='sheet-skillist_name'><input type='text' name='attr_skillname1' /></td>
-                    <td class='sheet-skillist_rank'><input type='text' name='attr_skillrank1' class='sheet-skillrank' /></td>
-                    <td class='sheet-skillist_characteristic'><select name='attr_skillattribute1' class='sheet-skillattribute'>
-                        <option value='@{str}'>Strength</option>
-                        <option value='@{dex}'>Dexterity</option>
-                        <option value='@{dia}'>Diagnose</option>
-                        <option value='@{con}'>Concentrantion</option>
-                        <option value='@{cha}'>Charisma</option>
-                        <option value='@{kno}'>Knowledge</option>
-                        <option value='@{phy}'>Physique</option>
-                        <option value='@{coo}'>Cool</option>
-                    </select></td>
-
-                    <td class='sheet-skillist_max'><input type='text' disabled='disabled' name='attr_skillmax1' value='@{skillattribute1}' class='sheet-skillmax' /></td>
-                    <td class='sheet-skillist_roll'><button type='roll' name='roll_skillname1' value='@{character_name} rolls for @{skillname1}\n/roll 2d10+@{skillrank1}'></button></td>
+                    <th>STR</th>
+                    <th>DEX</th>
+                    <th>DIA</th>
+                    <th>CON</th>
+                    <th>CHA</th>
+                    <th>KNO</th>
+                    <th>PHY</th>
+                    <th>COO</th>
+                    <th style='width: 50px;'> </th>
+                    <th>FLUX</th>
+                    <th>Formulae</th>
+                </tr>
+                <tr>
+                    <td><input type='text' name='attr_str' class='characteristic' /></td>
+                    <td><input type='text' name='attr_dex' class='characteristic' /></td>
+                    <td><input type='text' name='attr_dia' class='characteristic' /></td>
+                    <td><input type='text' name='attr_con' class='characteristic' /></td>
+                    <td><input type='text' name='attr_cha' class='characteristic' /></td>
+                    <td><input type='text' name='attr_know' class='characteristic' /></td>
+                    <td><input type='text' name='attr_phys' class='characteristic' /></td>
+                    <td><input type='text' name='attr_cool' class='characteristic' /></td>
+                    <td> </td>
+                    <td><input type='text' name='attr_flux' class='characteristic' /></td>
+                    <td><input type='text' name='attr_formulae' class='characteristic' /></td>
                 </tr>
             </tbody>
-        </table><!--Custom skill-->
-    </fieldset><!--Skills-->
+        </table>
+    </div>
+    
+    <div class='sheet-data_container'>
+        <h3>Hitpoints and armor</h3>
+
+        <div>Armor name: <input type='text' name='attr_armor_name' /></div>
+        <table class='sheet-armorAndHitPoints'>
+            <tbody>
+                <tr>
+                    <th>Location</th>
+                    <th>Hits</th>
+                    <th>Damage</th>
+                    <th>PV</th>
+                    <th>ID</th>
+                    <th>AD</th>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td><input type='text' name='attr_hits_total' class='sheet-hits' /></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Head</td>
+                    <td><input type='text' name='attr_hits_head' class='sheet-hits' /></td>
+                    <td><input type='text' name='attr_damage_head' class='sheet-damage' /></td>
+                    <td><input type='text' name='attr_pv_head' class='sheet-pv' /></td>
+                    <td><input type='text' name='attr_id_head' class='sheet-id' /></td>
+                    <td><input type='text' name='attr_ad_head' class='sheet-ad' /></td>
+                </tr>
+                <tr>
+                    <td>Torso</td>
+                    <td><input type='text' name='attr_hits_torso' class='sheet-hits' /></td>
+                    <td><input type='text' name='attr_damage_torso' class='sheet-damage' /></td>
+                    <td><input type='text' name='attr_pv_torso' class='sheet-pv' /></td>
+                    <td><input type='text' name='attr_id_torso' class='sheet-id' /></td>
+                    <td><input type='text' name='attr_ad_torso' class='sheet-ad' /></td>
+                </tr>
+                <tr>
+                    <td>Right arm</td>
+                    <td><input type='text' name='attr_hits_ra' class='sheet-hits' /></td>
+                    <td><input type='text' name='attr_damage_ra' class='sheet-damage' /></td>
+                    <td><input type='text' name='attr_pv_ra' class='sheet-pv' /></td>
+                    <td><input type='text' name='attr_id_ra' class='sheet-id' /></td>
+                    <td><input type='text' name='attr_ad_ra' class='sheet-ad' /></td>
+                </tr>
+                <tr>
+                    <td>Left arm</td>
+                    <td><input type='text' name='attr_hits_la' class='sheet-hits' /></td>
+                    <td><input type='text' name='attr_damage_la' class='sheet-damage' /></td>
+                    <td><input type='text' name='attr_pv_la' class='sheet-pv' /></td>
+                    <td><input type='text' name='attr_id_la' class='sheet-id' /></td>
+                    <td><input type='text' name='attr_ad_la' class='sheet-ad' /></td>
+                </tr>
+                <tr>
+                    <td>Right leg</td>
+                    <td><input type='text' name='attr_hits_rl' class='sheet-hits' /></td>
+                    <td><input type='text' name='attr_damage_rl' class='sheet-damage' /></td>
+                    <td><input type='text' name='attr_pv_rl' class='sheet-pv' /></td>
+                    <td><input type='text' name='attr_id_rl' class='sheet-id' /></td>
+                    <td><input type='text' name='attr_ad_rl' class='sheet-ad' /></td>
+                </tr>
+                <tr>
+                    <td>Left leg</td>
+                    <td><input type='text' name='attr_hits_ll' class='sheet-hits' /></td>
+                    <td><input type='text' name='attr_damage_ll' class='sheet-damage' /></td>
+                    <td><input type='text' name='attr_pv_ll' class='sheet-pv' /></td>
+                    <td><input type='text' name='attr_id_ll' class='sheet-id' /></td>
+                    <td><input type='text' name='attr_ad_ll' class='sheet-ad' /></td>
+                </tr>
+                <tr>
+                    <td>Wounds</td>
+                    <td colspan='4'><input type='text' name='attr_wounds' class='sheet-wounds' /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class='sheet-data_container'>
+        <h3>Skills</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th class='sheet-skillist_name'>Skill</th>
+                    <th class='sheet-skillist_rank'>Rank</th>
+                    <th class='sheet-skillist_characteristic'>Characteristic</th>
+                    <th class='sheet-skillist_max'>Max rank</th>
+                    <th class='sheet-skillist_roll'>Roll</th>
+                </tr>
+            </tbody>
+        </table>
+        <fieldset class='repeating_skills'>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class='sheet-skillist_name'><input type='text' name='attr_skillname1' /></td>
+                        <td class='sheet-skillist_rank'><input type='text' name='attr_skillrank1' class='sheet-skillrank' /></td>
+                        <td class='sheet-skillist_characteristic'><select name='attr_skillattribute1' class='sheet-skillattribute'>
+                            <option value='@{str}'>Strength</option>
+                            <option value='@{dex}'>Dexterity</option>
+                            <option value='@{dia}'>Diagnose</option>
+                            <option value='@{con}'>Concentrantion</option>
+                            <option value='@{cha}'>Charisma</option>
+                            <option value='@{kno}'>Knowledge</option>
+                            <option value='@{phy}'>Physique</option>
+                            <option value='@{coo}'>Cool</option>
+                        </select></td>
+
+                        <td class='sheet-skillist_max'><input type='text' disabled='disabled' name='attr_skillmax1' value='@{skillattribute1}' class='sheet-skillmax' /></td>
+                        <td class='sheet-skillist_roll'><button type='roll' name='roll_skillname1' value='@{character_name} rolls for @{skillname1}\n/roll 2d10+@{skillrank1}'></button></td>
+                    </tr>
+                </tbody>
+            </table><!--Custom skill-->
+        </fieldset><!--Skills-->
+    </div>
 </div>
 
 <div class="sheet-tab-content sheet-tab-skills">
