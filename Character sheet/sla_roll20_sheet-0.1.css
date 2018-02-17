@@ -113,6 +113,13 @@ div.sheet-data_container {
     margin: 1em 0px 0px 0px;
 }
 
+.sheet-data_container_single {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 0.5em 0px 0px 0px;
+}
+
 input.sheet-hits, input.sheet-damage, input.sheet-pv, input.sheet-id, input.sheet-ad, input.sheet-wounds {
     border: 1px solid #ddd;
     border-radius: 3px;
@@ -129,7 +136,8 @@ textarea.sheet-notes {
     height: 20em;
 }
 input.sheet-tab-summary:checked ~ div.sheet-tab-summary,
-input.sheet-tab-skills:checked ~ div.sheet-tab-skills {
+input.sheet-tab-skills:checked ~ div.sheet-tab-skills,
+input.sheet-tab-equipment:checked ~ div.sheet-tab-equipment {
     display: block;
 }
 input.sheet-tab-new {
@@ -163,7 +171,6 @@ input.sheet-tab-new:checked + span {
     border-radius: 4px;
     font-weight: bold;
     color: white;
-    /*color: #692927;*/
 }
 
 .sheet-weapon_name {
@@ -201,4 +208,20 @@ input.sheet-tab-new:checked + span {
 }
 .sheet-weapon_ammotype {
     width: 100px;
+}
+.sheet-armor_name {
+    width: 200px;
+}
+input.sheet-armor-pv {
+    width: 50px;
+}
+input.sheet-armor-id {
+    width: 50px;
+}
+input.sheet-armor-note {
+    width: 300px;
+}
+textarea.sheet-armor_note {
+    width: 90%;
+    height: 5em;
 }

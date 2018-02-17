@@ -45,7 +45,10 @@
 <span class="sheet-tab-new sheet-player-sheet">Summary Sheet</span>
 <input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-skills sheet-player-sheet" value="2" />
 <span class="sheet-tab-new sheet-player-sheet">Skill Sheet</span>
+<input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-equipment sheet-player-sheet" value="3" />
+<span class="sheet-tab-new sheet-player-sheet">Equipment Sheet</span>
 <!--Player Sheet Tabs-->
+<!-- Start summary tab -->
 <div class="sheet-tab-content sheet-tab-summary">
     <div class='sheet-data_container'>
         <div class='sheet-characteristic_row'>
@@ -536,6 +539,7 @@
     </div>
 </div>
 
+<!-- Start skill tab -->
 <div class="sheet-tab-content sheet-tab-skills">
 
     <h3>Actual skill list</h3>
@@ -551,61 +555,61 @@
             <tr><td colspan='4'><h4>Strength Skills</h4></td></tr>
             <tr>
                 <td>Unarmed</td>
-                <td><input type='text' name='attr_rank_Unarmed' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Unarmed' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Unarmed' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Unarmed' value='/roll 2d10+@{rank_Unarmed} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Blade 1h</td>
-                <td><input type='text' name='attr_rank_Blade_1h' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Blade_1h' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Blade_1h' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Blade_1h' value='/roll 2d10+@{rank_Blade_1h} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Blade 2h</td>
-                <td><input type='text' name='attr_rank_Blade_2h' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Blade_2h' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Blade_2h' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Blade_2h' value='/roll 2d10+@{rank_Blade_2h} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Club 1h</td>
-                <td><input type='text' name='attr_rank_Club_1h' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Club_1h' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Club_1h' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Club_1h' value='/roll 2d10+@{rank_Club_1h} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Club 2h</td>
-                <td><input type='text' name='attr_rank_Club_2h' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Club_2h' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Club_2h' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Club_2h' value='/roll 2d10+@{rank_Club_2h} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Chainaxe</td>
-                <td><input type='text' name='attr_rank_Chainaxe' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Chainaxe' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Chainaxe' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Chainaxe' value='/roll 2d10+@{rank_Chainaxe} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Flexible Weapons</td>
-                <td><input type='text' name='attr_rank_Flexible_Weapons' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Flexible_Weapons' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Flexible_Weapons' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Flexible_Weapons' value='/roll 2d10+@{rank_Flexible_Weapons} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Polearm</td>
-                <td><input type='text' name='attr_rank_Polearm' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Polearm' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Polearm' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Polearm' value='/roll 2d10+@{rank_Polearm} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Axe</td>
-                <td><input type='text' name='attr_rank_Axe' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Axe' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Axe' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Axe' value='/roll 2d10+@{rank_Axe} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Industrial Weaponry:</td>
-                <td><input type='text' name='attr_rank_Industrial_Weaponry:' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Industrial_Weaponry:' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Industrial_Weaponry:' value='@{str}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Industrial_Weaponry:' value='/roll 2d10+@{rank_Industrial_Weaponry:} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -613,109 +617,109 @@
             <tr><td colspan='4'><h4>Diagnose Skills</h4></td></tr>
             <tr>
                 <td>Computer use</td>
-                <td><input type='text' name='attr_rank_Computer_use' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Computer_use' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Computer_use' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Computer_use' value='/roll 2d10+@{rank_Computer_use} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Electronics Industrial</td>
-                <td><input type='text' name='attr_rank_Electronics_Industrial' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Electronics_Industrial' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Electronics_Industrial' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Electronics_Industrial' value='/roll 2d10+@{rank_Electronics_Industrial} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Mechanics Industrial</td>
-                <td><input type='text' name='attr_rank_Mechanics_Industrial' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Mechanics_Industrial' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Mechanics_Industrial' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Mechanics_Industrial' value='/roll 2d10+@{rank_Mechanics_Industrial} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Demolitions</td>
-                <td><input type='text' name='attr_rank_Demolitions' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Demolitions' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Demolitions' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Demolitions' value='/roll 2d10+@{rank_Demolitions} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Medical Paramedic</td>
-                <td><input type='text' name='attr_rank_Medical_Paramedic' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Medical_Paramedic' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Medical_Paramedic' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Medical_Paramedic' value='/roll 2d10+@{rank_Medical_Paramedic} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Tactics</td>
-                <td><input type='text' name='attr_rank_Tactics' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Tactics' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Tactics' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Tactics' value='/roll 2d10+@{rank_Tactics} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Tracking</td>
-                <td><input type='text' name='attr_rank_Tracking' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Tracking' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Tracking' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Tracking' value='/roll 2d10+@{rank_Tracking} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Bribery</td>
-                <td><input type='text' name='attr_rank_Bribery' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Bribery' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Bribery' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Bribery' value='/roll 2d10+@{rank_Bribery} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Torture</td>
-                <td><input type='text' name='attr_rank_Torture' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Torture' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Torture' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Torture' value='/roll 2d10+@{rank_Torture} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Lock picking</td>
-                <td><input type='text' name='attr_rank_Lock_picking' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Lock_picking' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Lock_picking' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Lock_picking' value='/roll 2d10+@{rank_Lock_picking} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Electronic locks</td>
-                <td><input type='text' name='attr_rank_Electronic_locks' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Electronic_locks' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Electronic_locks' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Electronic_locks' value='/roll 2d10+@{rank_Electronic_locks} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Business Admin</td>
-                <td><input type='text' name='attr_rank_Business_Admin' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Business_Admin' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Business_Admin' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Business_Admin' value='/roll 2d10+@{rank_Business_Admin} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Forensics</td>
-                <td><input type='text' name='attr_rank_Forensics' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Forensics' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Forensics' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Forensics' value='/roll 2d10+@{rank_Forensics} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Pathology</td>
-                <td><input type='text' name='attr_rank_Pathology' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Pathology' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Pathology' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Pathology' value='/roll 2d10+@{rank_Pathology} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Read lips</td>
-                <td><input type='text' name='attr_rank_Read_lips' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Read_lips' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Read_lips' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Read_lips' value='/roll 2d10+@{rank_Read_lips} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Intimidation</td>
-                <td><input type='text' name='attr_rank_Intimidation' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Intimidation' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Intimidation' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Intimidation' value='/roll 2d10+@{rank_Intimidation} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Covert Engineering</td>
-                <td><input type='text' name='attr_rank_Covert_Engineering' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Covert_Engineering' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Covert_Engineering' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Covert_Engineering' value='/roll 2d10+@{rank_Covert_Engineering} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Xenobiology</td>
-                <td><input type='text' name='attr_rank_Xenobiology' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Xenobiology' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Xenobiology' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Xenobiology' value='/roll 2d10+@{rank_Xenobiology} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -723,7 +727,7 @@
             <tr><td colspan='4'><h4>Cool Skills</h4></td></tr>
             <tr>
                 <td>Willpower</td>
-                <td><input type='text' name='attr_rank_Willpower' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Willpower' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Willpower' value='@{dia}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Willpower' value='/roll 2d10+@{rank_Willpower} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -731,79 +735,79 @@
             <tr><td colspan='4'><h4>Flux Skills</h4></td></tr>
             <tr>
                 <td>Blast</td>
-                <td><input type='text' name='attr_rank_Blast' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Blast' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Blast' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Blast' value='/roll 2d10+@{rank_Blast} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Blue Thermal</td>
-                <td><input type='text' name='attr_rank_Blue_Thermal' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Blue_Thermal' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Blue_Thermal' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Blue_Thermal' value='/roll 2d10+@{rank_Blue_Thermal} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Communication</td>
-                <td><input type='text' name='attr_rank_Communication' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Communication' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Communication' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Communication' value='/roll 2d10+@{rank_Communication} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Ebb Detect</td>
-                <td><input type='text' name='attr_rank_Ebb_Detect' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Ebb_Detect' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Ebb_Detect' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Ebb_Detect' value='/roll 2d10+@{rank_Ebb_Detect} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Enhancement</td>
-                <td><input type='text' name='attr_rank_Enhancement' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Enhancement' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Enhancement' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Enhancement' value='/roll 2d10+@{rank_Enhancement} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Healing</td>
-                <td><input type='text' name='attr_rank_Healing' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Healing' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Healing' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Healing' value='/roll 2d10+@{rank_Healing} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Illumination</td>
-                <td><input type='text' name='attr_rank_Illumination' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Illumination' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Illumination' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Illumination' value='/roll 2d10+@{rank_Illumination} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Protect</td>
-                <td><input type='text' name='attr_rank_Protect' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Protect' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Protect' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Protect' value='/roll 2d10+@{rank_Protect} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Reality fold</td>
-                <td><input type='text' name='attr_rank_Reality_fold' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Reality_fold' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Reality_fold' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Reality_fold' value='/roll 2d10+@{rank_Reality_fold} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Red Thermal</td>
-                <td><input type='text' name='attr_rank_Red_Thermal' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Red_Thermal' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Red_Thermal' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Red_Thermal' value='/roll 2d10+@{rank_Red_Thermal} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Senses|Vision;Hearing</td>
-                <td><input type='text' name='attr_rank_Senses-Vision;Hearing' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Senses-Vision;Hearing' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Senses|Vision;Hearing' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Senses|Vision;Hearing' value='/roll 2d10+@{rank_Senses_Vision;Hearing} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Telekinesis</td>
-                <td><input type='text' name='attr_rank_Telekinesis' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Telekinesis' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Telekinesis' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Telekinesis' value='/roll 2d10+@{rank_Telekinesis} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Gore cannon</td>
-                <td><input type='text' name='attr_rank_Gore_cannon' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Gore_cannon' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Gore_cannon' value='20' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Gore_cannon' value='/roll 2d10+@{rank_Gore_cannon} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -811,97 +815,97 @@
             <tr><td colspan='4'><h4>Dexterity Skills</h4></td></tr>
             <tr>
                 <td>Martial arts</td>
-                <td><input type='text' name='attr_rank_Martial_arts' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Martial_arts' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Martial_arts' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Martial_arts' value='/roll 2d10+@{rank_Martial_arts} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Gymnastics</td>
-                <td><input type='text' name='attr_rank_Gymnastics' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Gymnastics' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Gymnastics' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Gymnastics' value='/roll 2d10+@{rank_Gymnastics} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Forgery</td>
-                <td><input type='text' name='attr_rank_Forgery' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Forgery' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Forgery' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Forgery' value='/roll 2d10+@{rank_Forgery} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Sleight</td>
-                <td><input type='text' name='attr_rank_Sleight' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Sleight' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Sleight' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Sleight' value='/roll 2d10+@{rank_Sleight} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Sneaking</td>
-                <td><input type='text' name='attr_rank_Sneaking' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Sneaking' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Sneaking' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Sneaking' value='/roll 2d10+@{rank_Sneaking} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Hide</td>
-                <td><input type='text' name='attr_rank_Hide' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Hide' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Hide' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Hide' value='/roll 2d10+@{rank_Hide} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Pistol</td>
-                <td><input type='text' name='attr_rank_Pistol' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Pistol' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Pistol' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Pistol' value='/roll 2d10+@{rank_Pistol} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Rifle</td>
-                <td><input type='text' name='attr_rank_Rifle' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Rifle' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Rifle' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Rifle' value='/roll 2d10+@{rank_Rifle} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Drive bike</td>
-                <td><input type='text' name='attr_rank_Drive_bike' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Drive_bike' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Drive_bike' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Drive_bike' value='/roll 2d10+@{rank_Drive_bike} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Sewing</td>
-                <td><input type='text' name='attr_rank_Sewing' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Sewing' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Sewing' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Sewing' value='/roll 2d10+@{rank_Sewing} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Archery</td>
-                <td><input type='text' name='attr_rank_Archery' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Archery' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Archery' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Archery' value='/roll 2d10+@{rank_Archery} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Co-ordination</td>
-                <td><input type='text' name='attr_rank_Co-ordination' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Co-ordination' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Co-ordination' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Co-ordination' value='/roll 2d10+@{rank_Co-ordination} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Extreme Violence</td>
-                <td><input type='text' name='attr_rank_Extreme_Violence' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Extreme_Violence' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Extreme_Violence' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Extreme_Violence' value='/roll 2d10+@{rank_Extreme_Violence} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Flail</td>
-                <td><input type='text' name='attr_rank_Flail' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Flail' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Flail' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Flail' value='/roll 2d10+@{rank_Flail} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Trick Shot</td>
-                <td><input type='text' name='attr_rank_Trick_Shot' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Trick_Shot' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Trick_Shot' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Trick_Shot' value='/roll 2d10+@{rank_Trick_Shot} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Zero-G Maneuvres</td>
-                <td><input type='text' name='attr_rank_Zero-G_Maneuvres' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Zero-G_Maneuvres' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Zero-G_Maneuvres' value='@{dex}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Zero-G_Maneuvres' value='/roll 2d10+@{rank_Zero-G Maneuvres} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -909,79 +913,79 @@
             <tr><td colspan='4'><h4>Concentration Skills</h4></td></tr>
             <tr>
                 <td>Weapon Maintenance</td>
-                <td><input type='text' name='attr_rank_Weapon_Maintenance' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Weapon_Maintenance' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Weapon_Maintenance' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Weapon_Maintenance' value='/roll 2d10+@{rank_Weapon_Maintenance} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Drive civilian</td>
-                <td><input type='text' name='attr_rank_Drive_civilian' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Drive_civilian' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Drive_civilian' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Drive_civilian' value='/roll 2d10+@{rank_Drive_civilian} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Drive Military</td>
-                <td><input type='text' name='attr_rank_Drive_Military' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Drive_Military' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Drive_Military' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Drive_Military' value='/roll 2d10+@{rank_Drive_Military} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Detect</td>
-                <td><input type='text' name='attr_rank_Detect' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Detect' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Detect' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Detect' value='/roll 2d10+@{rank_Detect} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Medical Surgery</td>
-                <td><input type='text' name='attr_rank_Medical_Surgery' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Medical_Surgery' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Medical_Surgery' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Medical_Surgery' value='/roll 2d10+@{rank_Medical_Surgery} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Marksman</td>
-                <td><input type='text' name='attr_rank_Marksman' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Marksman' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Marksman' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Marksman' value='/roll 2d10+@{rank_Marksman} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Business Finance</td>
-                <td><input type='text' name='attr_rank_Business_Finance' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Business_Finance' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Business_Finance' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Business_Finance' value='/roll 2d10+@{rank_Business_Finance} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Photography</td>
-                <td><input type='text' name='attr_rank_Photography' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Photography' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Photography' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Photography' value='/roll 2d10+@{rank_Photography} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Gambling</td>
-                <td><input type='text' name='attr_rank_Gambling' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Gambling' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Gambling' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Gambling' value='/roll 2d10+@{rank_Gambling} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Artistic Ability</td>
-                <td><input type='text' name='attr_rank_Artistic_Ability' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Artistic_Ability' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Artistic_Ability' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Artistic_Ability' value='/roll 2d10+@{rank_Artistic_Ability} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Biofeedback</td>
-                <td><input type='text' name='attr_rank_Biofeedback' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Biofeedback' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Biofeedback' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Biofeedback' value='/roll 2d10+@{rank_Biofeedback} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Blind Fighting</td>
-                <td><input type='text' name='attr_rank_Blind_Fighting' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Blind_Fighting' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Blind_Fighting' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Blind_Fighting' value='/roll 2d10+@{rank_Blind_Fighting} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Drunken Fighter:</td>
-                <td><input type='text' name='attr_rank_Drunken_Fighter:' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Drunken_Fighter:' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Drunken_Fighter:' value='@{con}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Drunken_Fighter:' value='/roll 2d10+@{rank_Drunken_Fighter:} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -998,67 +1002,67 @@
             <tr><td colspan='4'><h4>Charisma Skills</h4></td></tr>
             <tr>
                 <td>Leadership</td>
-                <td><input type='text' name='attr_rank_Leadership' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Leadership' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Leadership' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Leadership' value='/roll 2d10+@{rank_Leadership} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Seduction</td>
-                <td><input type='text' name='attr_rank_Seduction' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Seduction' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Seduction' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Seduction' value='/roll 2d10+@{rank_Seduction} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Disguise</td>
-                <td><input type='text' name='attr_rank_Disguise' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Disguise' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Disguise' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Disguise' value='/roll 2d10+@{rank_Disguise} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Interview</td>
-                <td><input type='text' name='attr_rank_Interview' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Interview' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Interview' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Interview' value='/roll 2d10+@{rank_Interview} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Diplomacy</td>
-                <td><input type='text' name='attr_rank_Diplomacy' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Diplomacy' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Diplomacy' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Diplomacy' value='/roll 2d10+@{rank_Diplomacy} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Communique</td>
-                <td><input type='text' name='attr_rank_Communique' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Communique' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Communique' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Communique' value='/roll 2d10+@{rank_Communique} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Haggle</td>
-                <td><input type='text' name='attr_rank_Haggle' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Haggle' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Haggle' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Haggle' value='/roll 2d10+@{rank_Haggle} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Persuasion</td>
-                <td><input type='text' name='attr_rank_Persuasion' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Persuasion' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Persuasion' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Persuasion' value='/roll 2d10+@{rank_Persuasion} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Sing</td>
-                <td><input type='text' name='attr_rank_Sing' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Sing' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Sing' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Sing' value='/roll 2d10+@{rank_Sing} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Animal Handling</td>
-                <td><input type='text' name='attr_rank_Animal_Handling' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Animal_Handling' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Animal_Handling' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Animal_Handling' value='/roll 2d10+@{rank_Animal_Handling} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Telegenics</td>
-                <td><input type='text' name='attr_rank_Telegenics' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Telegenics' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Telegenics' value='@{cha}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Telegenics' value='/roll 2d10+@{rank_Telegenics} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -1066,61 +1070,61 @@
             <tr><td colspan='4'><h4>Physique Skills</h4></td></tr>
             <tr>
                 <td>Wrestling</td>
-                <td><input type='text' name='attr_rank_Wrestling' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Wrestling' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Wrestling' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Wrestling' value='/roll 2d10+@{rank_Wrestling} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Acrobatics</td>
-                <td><input type='text' name='attr_rank_Acrobatics' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Acrobatics' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Acrobatics' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Acrobatics' value='/roll 2d10+@{rank_Acrobatics} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Running</td>
-                <td><input type='text' name='attr_rank_Running' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Running' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Running' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Running' value='/roll 2d10+@{rank_Running} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Climbing</td>
-                <td><input type='text' name='attr_rank_Climbing' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Climbing' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Climbing' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Climbing' value='/roll 2d10+@{rank_Climbing} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Swim</td>
-                <td><input type='text' name='attr_rank_Swim' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Swim' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Swim' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Swim' value='/roll 2d10+@{rank_Swim} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Auto/support</td>
-                <td><input type='text' name='attr_rank_Auto/support' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Auto/support' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Auto/support' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Auto/support' value='/roll 2d10+@{rank_Auto/support} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Throw</td>
-                <td><input type='text' name='attr_rank_Throw' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Throw' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Throw' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Throw' value='/roll 2d10+@{rank_Throw} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Dance</td>
-                <td><input type='text' name='attr_rank_Dance' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Dance' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Dance' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Dance' value='/roll 2d10+@{rank_Dance} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Sports</td>
-                <td><input type='text' name='attr_rank_Sports' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Sports' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Sports' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Sports' value='/roll 2d10+@{rank_Sports} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Shield</td>
-                <td><input type='text' name='attr_rank_Shield' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Shield' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Shield' value='@{phy}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Shield' value='/roll 2d10+@{rank_Shield} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -1128,211 +1132,211 @@
             <tr><td colspan='4'><h4>Knowledge Skills</h4></td></tr>
             <tr>
                 <td>Computer Subterfuge</td>
-                <td><input type='text' name='attr_rank_Computer_Subterfuge' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Computer_Subterfuge' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Computer_Subterfuge' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Computer_Subterfuge' value='/roll 2d10+@{rank_Computer_Subterfuge} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Electronic repair</td>
-                <td><input type='text' name='attr_rank_Electronic_repair' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Electronic_repair' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Electronic_repair' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Electronic_repair' value='/roll 2d10+@{rank_Electronic_repair} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Mechanics repair</td>
-                <td><input type='text' name='attr_rank_Mechanics_repair' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Mechanics_repair' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Mechanics_repair' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Mechanics_repair' value='/roll 2d10+@{rank_Mechanics_repair} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Demolitions Disposal</td>
-                <td><input type='text' name='attr_rank_Demolitions_Disposal' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Demolitions_Disposal' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Demolitions_Disposal' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Demolitions_Disposal' value='/roll 2d10+@{rank_Demolitions_Disposal} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Survival</td>
-                <td><input type='text' name='attr_rank_Survival' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Survival' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Survival' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Survival' value='/roll 2d10+@{rank_Survival} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Medical practice</td>
-                <td><input type='text' name='attr_rank_Medical_practice' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Medical_practice' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Medical_practice' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Medical_practice' value='/roll 2d10+@{rank_Medical_practice} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Streetwise</td>
-                <td><input type='text' name='attr_rank_Streetwise' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Streetwise' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Streetwise' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Streetwise' value='/roll 2d10+@{rank_Streetwise} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Evaluate Opponent</td>
-                <td><input type='text' name='attr_rank_Evaluate_Opponent' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Evaluate_Opponent' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Evaluate_Opponent' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Evaluate_Opponent' value='/roll 2d10+@{rank_Evaluate_Opponent} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Literacy</td>
-                <td><input type='text' name='attr_rank_Literacy' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Literacy' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Literacy' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Literacy' value='/roll 2d10+@{rank_Literacy} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>SLA Information</td>
-                <td><input type='text' name='attr_rank_SLA_Information' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_SLA_Information' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-SLA_Information' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_SLA_Information' value='/roll 2d10+@{rank_SLA_Information} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Rival Company</td>
-                <td><input type='text' name='attr_rank_Rival_Company' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Rival_Company' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Rival_Company' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Rival_Company' value='/roll 2d10+@{rank_Rival_Company} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Psychology</td>
-                <td><input type='text' name='attr_rank_Psychology' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Psychology' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Psychology' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Psychology' value='/roll 2d10+@{rank_Psychology} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Astronomy</td>
-                <td><input type='text' name='attr_rank_Astronomy' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Astronomy' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Astronomy' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Astronomy' value='/roll 2d10+@{rank_Astronomy} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Pilot Military</td>
-                <td><input type='text' name='attr_rank_Pilot_Military' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Pilot_Military' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Pilot_Military' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Pilot_Military' value='/roll 2d10+@{rank_Pilot_Military} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Navigation</td>
-                <td><input type='text' name='attr_rank_Navigation' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Navigation' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Navigation' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Navigation' value='/roll 2d10+@{rank_Navigation} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Space Navigation</td>
-                <td><input type='text' name='attr_rank_Space_Navigation' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Space_Navigation' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Space_Navigation' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Space_Navigation' value='/roll 2d10+@{rank_Space_Navigation} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Ecology</td>
-                <td><input type='text' name='attr_rank_Ecology' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Ecology' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Ecology' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Ecology' value='/roll 2d10+@{rank_Ecology} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Cooking</td>
-                <td><input type='text' name='attr_rank_Cooking' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Cooking' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Cooking' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Cooking' value='/roll 2d10+@{rank_Cooking} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Agriculture</td>
-                <td><input type='text' name='attr_rank_Agriculture' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Agriculture' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Agriculture' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Agriculture' value='/roll 2d10+@{rank_Agriculture} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>History</td>
-                <td><input type='text' name='attr_rank_History' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_History' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-History' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_History' value='/roll 2d10+@{rank_History} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Music</td>
-                <td><input type='text' name='attr_rank_Music' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Music' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Music' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Music' value='/roll 2d10+@{rank_Music} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Archeology</td>
-                <td><input type='text' name='attr_rank_Archeology' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Archeology' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Archeology' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Archeology' value='/roll 2d10+@{rank_Archeology} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Physiography</td>
-                <td><input type='text' name='attr_rank_Physiography' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Physiography' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Physiography' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Physiography' value='/roll 2d10+@{rank_Physiography} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Cinematography</td>
-                <td><input type='text' name='attr_rank_Cinematography' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Cinematography' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Cinematography' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Cinematography' value='/roll 2d10+@{rank_Cinematography} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Theatre</td>
-                <td><input type='text' name='attr_rank_Theatre' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Theatre' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Theatre' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Theatre' value='/roll 2d10+@{rank_Theatre} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Architecture</td>
-                <td><input type='text' name='attr_rank_Architecture' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Architecture' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Architecture' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Architecture' value='/roll 2d10+@{rank_Architecture} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Physiology</td>
-                <td><input type='text' name='attr_rank_Physiology' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Physiology' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Physiology' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Physiology' value='/roll 2d10+@{rank_Physiology} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Palaeography</td>
-                <td><input type='text' name='attr_rank_Palaeography' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Palaeography' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Palaeography' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Palaeography' value='/roll 2d10+@{rank_Palaeography} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Botany</td>
-                <td><input type='text' name='attr_rank_Botany' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Botany' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Botany' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Botany' value='/roll 2d10+@{rank_Botany} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Zoology</td>
-                <td><input type='text' name='attr_rank_Zoology' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Zoology' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Zoology' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Zoology' value='/roll 2d10+@{rank_Zoology} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Mathematics</td>
-                <td><input type='text' name='attr_rank_Mathematics' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Mathematics' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Mathematics' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Mathematics' value='/roll 2d10+@{rank_Mathematics} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Video Games</td>
-                <td><input type='text' name='attr_rank_Video_Games' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Video_Games' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Video_Games' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Video_Games' value='/roll 2d10+@{rank_Video_Games} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Play instrument</td>
-                <td><input type='text' name='attr_rank_Play_instrument' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Play_instrument' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Play_instrument' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Play_instrument' value='/roll 2d10+@{rank_Play_instrument} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Cult Info</td>
-                <td><input type='text' name='attr_rank_Cult_Info' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Cult_Info' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Cult_Info' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Cult_Info' value='/roll 2d10+@{rank_Cult_Info} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>High Fashion</td>
-                <td><input type='text' name='attr_rank_High_Fashion' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_High_Fashion' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-High_Fashion' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_High_Fashion' value='/roll 2d10+@{rank_High_Fashion} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -1340,37 +1344,37 @@
             <tr><td colspan='4'><h4>Languages Skills</h4></td></tr>
             <tr>
                 <td>Killian</td>
-                <td><input type='text' name='attr_rank_Killian' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Killian' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Killian' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Killian' value='/roll 2d10+@{rank_Killian} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Wraith</td>
-                <td><input type='text' name='attr_rank_Wraith' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Wraith' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Wraith' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Wraith' value='/roll 2d10+@{rank_Wraith} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Shaktarian</td>
-                <td><input type='text' name='attr_rank_Shaktarian' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Shaktarian' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Shaktarian' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Shaktarian' value='/roll 2d10+@{rank_Shaktarian} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Sign Language</td>
-                <td><input type='text' name='attr_rank_Sign_Language' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Sign_Language' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Sign_Language' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Sign_Language' value='/roll 2d10+@{rank_Sign_Language} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>New Parisian</td>
-                <td><input type='text' name='attr_rank_New_Parisian' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_New_Parisian' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-New_Parisian' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_New_Parisian' value='/roll 2d10+@{rank_New_Parisian} + ?{Modifier for roll}'></button></td>
             </tr>
             <tr>
                 <td>Orienta</td>
-                <td><input type='text' name='attr_rank_Orienta' class='sheet-skillrank' /></td>
+                <td><input type='text' name='attr_rank_Orienta' class='sheet-skillrank' value='0' /></td>
                 <td><input type='text' disabled='disabled' name='attr_max-Orienta' value='@{know}' class='sheet-skillmax' /></td>
                 <td><button type='roll' name='roll_Orienta' value='/roll 2d10+@{rank_Orienta} + ?{Modifier for roll}'></button></td>
             </tr>
@@ -1394,7 +1398,7 @@
             <tbody>
                 <tr>
                     <td class='sheet-skillist_name'><input type='text' name='attr_skillname1' /></td>
-                    <td class='sheet-skillist_rank'><input type='text' name='attr_skillrank1' class='sheet-skillrank' /></td>
+                    <td class='sheet-skillist_rank'><input type='text' name='attr_skillrank1' class='sheet-skillrank' value='0' /></td>
                     <td class='sheet-skillist_characteristic'><select name='attr_skillattribute1' class='sheet-skillattribute'>
                         <option value='@{str}'>Strength</option>
                         <option value='@{dex}'>Dexterity</option>
@@ -1413,3 +1417,81 @@
         </table><!--Custom skill-->
     </fieldset><!--Skills-->
 </div>
+<!-- Start equipment tab -->
+<div class="sheet-tab-content sheet-tab-equipment">
+    <h3>Equipments</h3>
+    <div class='sheet-data_container'>
+        <h4>Armor</h4>
+        <fieldset class='repeating_armor'><!-- Armor repeatable -->
+            <div class='sheet-data_container_single'>
+                Armor name: <input type='text' name='attr_armor_name_1' class='sheet-armor_name' /><br />
+                In use: <input type='radio' name='attr_armor_in_use_1' value='1' /><br />
+                Notes:<br /><textarea name='attr_armor_note_1' class='sheet-armor_note'></textarea>
+                <table>
+                    <tr>
+                        <th>Location</th>
+                        <th class='sheet-armor-pv'>PV</th>
+                        <th class='sheet-armor-id'>ID</th>
+                        <th>Notes</th>
+                    </tr>
+                    <tr>
+                        <td>Head</td>
+                        <td>
+                            <input type='text' name='attr_armor_pv_head_1' class='sheet-armor-pv' />
+                        </td>
+                        <td>
+                            <input type='text' name='attr_armor_id_head_1' class='sheet-armor-id' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Torso</td>
+                        <td>
+                            <input type='text' name='attr_armor_pv_torso_1' class='sheet-armor-pv' />
+                        </td>
+                        <td>
+                            <input type='text' name='attr_armor_id_torso_1' class='sheet-armor-id' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Right arm</td>
+                        <td>
+                            <input type='text' name='attr_armor_pv_ra_1' class='sheet-armor-pv' />
+                        </td>
+                        <td>
+                            <input type='text' name='attr_armor_id_ra_1' class='sheet-armor-id' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Left arm</td>
+                        <td>
+                            <input type='text' name='attr_armor_pv_la_1' class='sheet-armor-pv' />
+                        </td>
+                        <td>
+                            <input type='text' name='attr_armor_id_la_1' class='sheet-armor-id' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Right leg</td>
+                        <td>
+                            <input type='text' name='attr_armor_pv_rl_1' class='sheet-armor-pv' />
+                        </td>
+                        <td>
+                            <input type='text' name='attr_armor_id_rl_1' class='sheet-armor-id' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Left leg</td>
+                        <td>
+                            <input type='text' name='attr_armor_pv_ll_1' class='sheet-armor-pv' />
+                        </td>
+                        <td>
+                            <input type='text' name='attr_armor_id_ll_1' class='sheet-armor-id' />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </fieldset><!--armor-->
+    </div>
+</div>
+
