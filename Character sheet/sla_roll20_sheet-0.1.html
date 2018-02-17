@@ -1,19 +1,119 @@
 <!--Is the Sheet for the Player or GM?-->
-
 <input type='radio' name='attr_gmdicepool' class='sheet-player' value='1' checked='checked' style='display:none'>
 <input type='radio' name='attr_gmdicepool' class='sheet-gm' value='2' style='display:none'>
-<div class='sheet-namecontainer'>
-    Character Name: <input type='text' name='attr_character_name' style='width: 200px;'/>
+<div class='sheet-data_container'>
+    <!--     <div class='sheet-namecontainer'> -->
+    <div class='sheet-padge_row'>
+        <div class='sheet-padge_header'>Name:</div>
+        <div class='sheet-padge_field'>
+            <input type='text' name='attr_character_name' class='sheet-character_name' />
+        </div>
+    </div>
+    <div class='sheet-padge_row'>
+        <div class='sheet-padge_header'>Species:</div>
+        <div class='sheet-padge_field'>
+            <select name='attr_character_species' class='sheet-character_species'>
+                <option value='Human'>Human</option>
+                <option value='Frother'>Frother</option>
+                <option value='Ebon'>Ebon</option>
+                <option value='Brain_waster'>Brain waster</option>
+                <option value='Wraith_raider'>Wraith Raider</option>
+                <option value='Shaktar'>Shaktar</option>
+                <option value='Stormer_313'>Stormer 313</option>
+            </select>
+        </div>
+    </div>
+    <div class='sheet-padge_row'>
+        <div class='sheet-padge_header'>SCL:</div>
+        <div class='sheet-padge_field'>
+            <input type='text' name='attr_character_scl_1' class='sheet-character_scl_1'/>
+            <input type='text' name='attr_character_scl_2' class='sheet-character_scl_2'/> . 
+            <input type='text' name='attr_character_scl_3' class='sheet-character_scl_3'/>
+        </div>
+    </div>
+    <div class='sheet-padge_row'>
+        <div class='sheet-padge_header'>Package:</div>
+        <div class='sheet-padge_field'>
+            <input type='text' name='attr_character_package' class='sheet-character_package' />
+        </div>
+    </div>
+    <!-- </div> -->
 </div>
+<div style='clear:both; margin: 0px 0px 1em 0px;'> </div>
 <!-- sheet tabs -->
 <input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-summary sheet-player-sheet" value="1" checked="checked" />
 <span class="sheet-tab-new sheet-player-sheet">Summary Sheet</span>
 <input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-skills sheet-player-sheet" value="2" />
 <span class="sheet-tab-new sheet-player-sheet">Skill Sheet</span>
-
 <!--Player Sheet Tabs-->
 <div class="sheet-tab-content sheet-tab-summary">
     <div class='sheet-data_container'>
+        <div class='sheet-characteristic_row'>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>STR</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_str' class='characteristic' />
+                </div>
+            </div>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>DEX</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_dex' class='characteristic' />
+                </div>
+            </div>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>DIA</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_dia' class='characteristic' />
+                </div>
+            </div>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>CON</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_con' class='characteristic' />
+                </div>
+            </div>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>CHA</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_cha' class='characteristic' />
+                </div>
+            </div>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>KNOW</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_know' class='characteristic' />
+                </div>
+            </div>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>PHYS</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_phys' class='characteristic' />
+                </div>
+            </div>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>COOL</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_cool' class='characteristic' />
+                </div>
+            </div>
+        </div>
+        <div class='sheet-characteristic_row'>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>Flux</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_flux' class='characteristic' />
+                </div>
+            </div>
+            <div class='sheet-characteristic_item'>
+                <div class='sheet-characteristic_header'>Formulae</div><br />
+                <div class='sheet-characteristic_field'>
+                    <input type='text' name='attr_formulae' class='characteristic' />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
         <table>
             <tbody>
                 <tr>
@@ -22,9 +122,9 @@
                     <th>DIA</th>
                     <th>CON</th>
                     <th>CHA</th>
-                    <th>KNO</th>
-                    <th>PHY</th>
-                    <th>COO</th>
+                    <th>KNOW</th>
+                    <th>PHYS</th>
+                    <th>COOL</th>
                     <th style='width: 50px;'> </th>
                     <th>FLUX</th>
                     <th>Formulae</th>
@@ -44,7 +144,8 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    
+    </div>-->
 
     <div class='sheet-data_container'>
         <h3>Hitpoints and armor</h3>
@@ -424,6 +525,14 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class='sheet-data_container'>
+        <h4>Advantages / Disadvantages</h4>
+        <textarea rows='10' cols='80' name='attr_advantages' class='sheet-advantanges'></textarea>
+    </div>
+    <div class='sheet-data_container'>
+        <h4>Notes</h4>
+        <textarea rows='30' cols='80' name='attr_advantages'  class='sheet-notes'></textarea>
     </div>
 </div>
 

@@ -1,4 +1,23 @@
-.sheet-characteristic {
+input.sheet-character_name {
+    width: 200px;
+}
+select.sheet-character_species {
+    width: 200px;
+}
+input.sheet-character_scl_1 {
+    width: 50px;
+}
+input.sheet-character_scl_2 {
+    width: 45px;
+}
+input.sheet-character_scl_3 {
+    width: 50px;
+}
+input.sheet-character_package {
+    width: 200px;
+}
+
+input.sheet-characteristic {
     width: 50px;
 }
 .sheet-skillrank {
@@ -35,7 +54,43 @@ td {
     width: 325px;
     display: inline-block;
     vertical-align: top;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin: 0px 1em 0px 0px;
 }
+
+.sheet-characteristic_row {
+    margin: 0px 0px 1em 0px;
+}
+.sheet-characteristic_item {
+    display: inline-block;
+    border: 2px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+}
+.sheet-characteristic_header {
+    display: inline-block;
+}
+.sheet-characteristic_field {
+    display: inline-block;
+}
+.sheet-padge_row {
+    margin: 0px 0px 0.5em 0px;
+}
+.sheet-padge_header {
+    width: 100px;
+    display: inline-block;
+}
+
+.sheet-padge_field {
+    width: 200px;
+    display: inline-block;
+}
+
+div.sheet-tab_selector {
+    margin: 1em 0px 0px 0px;
+}
+
 div.sheet-namecontainer {
     height: 1.5em;
 }
@@ -64,6 +119,15 @@ input.sheet-hits, input.sheet-damage, input.sheet-pv, input.sheet-id, input.shee
     width: 50px
 }
 
+
+textarea.sheet-advantanges {
+    width: 90%;
+    height: 10em;
+}
+textarea.sheet-notes {
+    width: 90%;
+    height: 20em;
+}
 input.sheet-tab-summary:checked ~ div.sheet-tab-summary,
 input.sheet-tab-skills:checked ~ div.sheet-tab-skills {
     display: block;
