@@ -123,7 +123,8 @@ div.sheet-data_container {
 input.sheet-hits, input.sheet-damage, input.sheet-pv, input.sheet-id, input.sheet-ad, input.sheet-wounds {
     border: 1px solid #ddd;
     border-radius: 3px;
-    width: 50px
+    width: 50px;
+    vertical-align: top;
 }
 
 
@@ -224,4 +225,47 @@ input.sheet-armor-note {
 textarea.sheet-armor_note {
     width: 90%;
     height: 5em;
+}
+td.sheet-armor_divider_column {
+    background: #eee;
+}
+textarea.sheet-armor_notes {
+    width: 150px;
+    font-size: 0.8em;
+}
+input.sheet-armor_name {
+    width: 150px;
+}
+.sheet-wounds_label, .sheet-wounds_value_cell {
+    text-align: top;
+}
+th.sheet-equipment_carried_col, td.sheet-equipment_carried_col {
+    width: 50px;
+    display: inline-block;
+    padding: 0px;
+    text-align: center;
+}
+th.sheet-equipment_name_col, td.sheet-equipment_name_col {
+    width: 200px;
+    display: inline-block;
+    padding: 0px;
+}
+th.sheet-equipment_notes_col, td.sheet-equipment_notes_col {
+    width: 300px;
+    display: inline-block;
+    padding: 0px;
+}
+th.sheet-equipment_weight_col, td.sheet-equipment_weight_col {
+    width: 50px;
+    display: inline-block;
+    padding: 0px;
+}
+input.sheet-equipment_name {
+    width: 200px;
+}
+input.sheet-equipment_weight {
+    width: 50px;
+}
+input.sheet-equipment_notes {
+    width: 300px;
 }
