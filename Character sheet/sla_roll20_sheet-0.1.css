@@ -24,7 +24,8 @@ input.sheet-characteristic {
     width: 50px;
 }
 .sheet-skillattribute {
-    width: 100px;
+    width: 80px;
+    font-size: 0.8em;
 }
 .sheet-skillmax {
     width: 50px;
@@ -109,6 +110,7 @@ table.sheet-armorAndHitPoints {
 div.sheet-data_container {
     border: 2px solid #999;
     border-radius: 5px;
+    box-shadow: 3px 3px 6px #aaa;
     padding: 5px;
     margin: 1em 0px 0px 0px;
 }
@@ -123,7 +125,7 @@ div.sheet-data_container {
 input.sheet-hits, input.sheet-damage, input.sheet-pv, input.sheet-id, input.sheet-ad, input.sheet-wounds {
     border: 1px solid #ddd;
     border-radius: 3px;
-    width: 50px;
+    width: 30px;
     vertical-align: top;
 }
 
@@ -133,6 +135,10 @@ textarea.sheet-advantanges {
     height: 10em;
 }
 textarea.sheet-notes {
+    width: 90%;
+    height: 20em;
+}
+textarea.sheet-simple_equipments {
     width: 90%;
     height: 20em;
 }
@@ -230,11 +236,12 @@ td.sheet-armor_divider_column {
     background: #eee;
 }
 textarea.sheet-armor_notes {
-    width: 150px;
+    width: 120px;
     font-size: 0.8em;
 }
 input.sheet-armor_name {
-    width: 150px;
+    width: 120px;
+    font-size: 0.8em;
 }
 .sheet-wounds_label, .sheet-wounds_value_cell {
     text-align: top;

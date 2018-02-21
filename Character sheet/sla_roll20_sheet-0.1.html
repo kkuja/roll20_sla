@@ -573,6 +573,10 @@
         </table>
     </div>
     <div class='sheet-data_container'>
+        <h4>General Equipments (Simplified)</h4>
+        <textarea rows='10' cols='80' name='attr_simple_general_equipments' class='sheet-simple_equipments'></textarea>
+    </div>
+    <div class='sheet-data_container'>
         <h4>Advantages / Disadvantages</h4>
         <textarea rows='10' cols='80' name='attr_advantages' class='sheet-advantanges'></textarea>
     </div>
@@ -584,7 +588,7 @@
 
 <!-- Start skill tab -->
 <div class="sheet-tab-content sheet-tab-skills">
-
+<div class='sheet-data_container'>
     <h3>Actual skill list</h3>
 
     <table class='sheet-skill_column'>
@@ -1466,10 +1470,14 @@
         </table><!--Custom skill-->
     </fieldset><!--Skills-->
 </div>
+</div>
 <!-- Start equipment tab -->
 <div class="sheet-tab-content sheet-tab-equipment">
     <h3>Equipments</h3>
+    
     <div class='sheet-data_container'>
+        <h4>General Equipments</h4>
+
         <table>
             <tbody>
                 <tr>
@@ -1503,7 +1511,7 @@
         </fieldset>
     </div>
     <div class='sheet-data_container'>
-        <h4>Armor</h4>
+        <h4>Armors</h4>
         <fieldset class='repeating_armor'><!-- Armor repeatable -->
             <div class='sheet-data_container_single'>
                 Armor name: <input type='text' name='attr_armor_name_1' class='sheet-armor_name' /><br />
