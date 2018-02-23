@@ -75,7 +75,7 @@ td {
 .sheet-characteristic_field {
     display: inline-block;
 }
-.sheet-padge_row {
+.sheet-padge_row, .sheet-padge_item {
     margin: 0px 0px 0.5em 0px;
 }
 .sheet-padge_header {
@@ -144,6 +144,7 @@ textarea.sheet-simple_equipments {
 }
 input.sheet-tab-summary:checked ~ div.sheet-tab-summary,
 input.sheet-tab-skills:checked ~ div.sheet-tab-skills,
+input.sheet-tab-ebb:checked ~ div.sheet-tab-ebb,
 input.sheet-tab-equipment:checked ~ div.sheet-tab-equipment {
     display: block;
 }
@@ -219,6 +220,9 @@ input.sheet-tab-new:checked + span {
 .sheet-armor_name {
     width: 200px;
 }
+input.sheet-weapon_modifier {
+    width: 50px;
+}
 input.sheet-armor-pv {
     width: 50px;
 }
@@ -275,4 +279,183 @@ input.sheet-equipment_weight {
 }
 input.sheet-equipment_notes {
     width: 300px;
+}
+input.sheet-money_c {
+    width: 75px;
+}
+input.sheet-money_u {
+    width: 75px;
+}
+.sheet-finances {
+    display: inline-block;
+    width: 150px;
+    border: 1px solid black;
+    padding: 0px;
+    vertical-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+.sheet-picture {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    padding: 0px;
+    text-align: center;
+    vertical-align: center;
+}
+.sheet-picture h4 {
+    margin: 0.2em 0px 0.2em 0px;
+}
+
+.sheet-xp_box {
+    display: inline-block;
+    width: 100px;
+    border: 1px solid black;
+    padding: 0px;
+    vertical-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+.sheet-xp_available, .sheet-xp_used {
+    width: 75px;
+}
+.sheet-xp_box h4 h3 {
+    margin: 0.2em 0px 0.2em 0px;
+}
+
+.sheet-movement_block {
+    border: 1px solid #999;
+    display: inline-block;
+    border-radius: 10px;
+    width: 75px;
+    text-align: center;
+    padding: 5px;
+}
+
+.sheet-movement_input {
+    width: 50px;
+}
+
+.sheet-no_border {
+    border: none;
+}
+
+input.sheet-difficulty {
+    width: 75px;
+}
+input.sheet-initiative {
+    width: 100px;
+}
+.sheet-characteristic_item_initiative {
+    width: 110px;
+}
+.sheet-weapon_stat {
+    display: inline-block;
+}
+.sheet-weapon_box {
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+}
+.sheet-weapon_notes {
+    width: 400px;
+}
+.sheet-drugs_carried_col {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-drugs_name_col {
+    width: 160px;
+    padding: 5px;
+}
+.sheet-drugs_name {
+    width: 150px;
+    padding: 5px;
+}
+.sheet-drugs_qnty_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-drugs_qnty {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-drugs_uses_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-drugs_uses {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-drugs_weight_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-drugs_addicted {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-drugs_notes_col {
+    width: 310px;
+    padding: 5px;
+}
+.sheet-drugs_notes {
+    width: 300px;
+    padding: 5px;
+}
+.sheet-flux_carried_col {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-flux_name_col {
+    width: 160px;
+    padding: 5px;
+}
+.sheet-flux_name {
+    width: 150px;
+    padding: 5px;
+}
+.sheet-flux_max_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-flux_max {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-flux_flux_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-flux_flux {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-flux_max {
+    width: 50px;
+    padding: 5px;
+}
+
+.sheet-flux_weight_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-flux_weight {
+    width: 50px;
+    padding: 5px;
+}
+
+.sheet-flux_addicted {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-flux_notes_col {
+    width: 310px;
+    padding: 5px;
+}
+.sheet-flux_notes {
+    width: 300px;
+    padding: 5px;
 }
