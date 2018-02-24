@@ -58,9 +58,240 @@
     </div>
 </div>
 <div style='clear:both; margin: 0px 0px 1em 0px;'> </div>
+<div class='sheet-data_container'>
+    <div class='sheet-characteristic_row'>
+        <div class='sheet-characteristic_item'>
+            <div class='sheet-characteristic_header'>STR</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{str} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Strength'></button><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_str' class='sheet-characteristic' />
+            </div>
+        </div>
+        <div class='sheet-characteristic_item'>
+            <div class='sheet-characteristic_header'>DEX</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{dex} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Dexterity'></button><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_dex' class='sheet-characteristic' />
+            </div>
+        </div>
+        <div class='sheet-characteristic_item'>
+            <div class='sheet-characteristic_header'>DIA</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{dia} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Diagnose'></button><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_dia' class='sheet-characteristic' />
+            </div>
+        </div>
+        <div class='sheet-characteristic_item'>
+            <div class='sheet-characteristic_header'>CON</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{con} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] Concentration'></button><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_con' class='sheet-characteristic' />
+            </div>
+        </div>
+        <div class='sheet-characteristic_item'>
+            <div class='sheet-characteristic_header'>CHA</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{cha} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Charisma'></button><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_cha' class='sheet-characteristic' />
+            </div>
+        </div>
+        <div class='sheet-characteristic_item'>
+            <div class='sheet-characteristic_header'>KNOW</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{know} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Knowledge'></button><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_know' class='sheet-characteristic' />
+            </div>
+        </div>
+        <div class='sheet-characteristic_item'>
+            <div class='sheet-characteristic_header'>PHYS</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{phy} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Physique'></button><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_phy' class='sheet-characteristic' />
+            </div>
+        </div>
+        <div class='sheet-characteristic_item'>
+            <div class='sheet-characteristic_header'>COOL</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{cool} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Cool'></button><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_cool' class='sheet-characteristic' />
+            </div>
+        </div>
+
+        <div class='sheet-characteristic_item'>
+            <div class='sheet-characteristic_header'>Damage bonus</div><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_damagebonus' class='sheet-characteristic' />
+            </div>
+        </div>
+        <div class='sheet-characteristic_item_initiative'>
+            <div class='sheet-characteristic_header'>Initiative phases</div><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_initiative_phases' class='sheet-initiative' />
+            </div>
+        </div>
+    </div>
+
+    <div class='sheet-characteristic_row'>
+        <div><b>Movement</b></div>
+        <div class='sheet-movement_block'>Walk <input type='text' name='attr_movement_walk' class='sheet-movement_input' /></div>
+        <div class='sheet-movement_block'>Run <input type='text' name='attr_movement_run' class='sheet-movement_input' /></div>
+        <div class='sheet-movement_block'>Sprint <input type='text' name='attr_movement_sprint' class='sheet-movement_input' /></div>
+        <div class='sheet-movement_block sheet-no_border'>&nbsp;</div>
+        <div class='sheet-movement_block'>Movement<input type='text' name='attr_movement_normal' class='sheet-movement_input' /></div>
+        <div class='sheet-movement_block'>Half&nbsp;move<input type='text' name='attr_movement_half' class='sheet-movement_input' /></div>
+        <div class='sheet-movement_block'>No&nbsp;move<input type='text' name='attr_movement_nomove' class='sheet-movement_input' /></div>
+    </div>
+</div>
+
+<div class='sheet-data_container'>
+    <h3>Hitpoints and armor</h3>
+    <table class='sheet-armorAndHitPoints'>
+        <tbody>
+            <tr>
+                <th>Location</th>
+                <th>Hits</th>
+                <th>Damage</th>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td colspan='3'>Armor name:<br /><input type='text' name='attr_armor_name1' class='sheet-armor_name' /><br />
+                    In use: <input type='radio' name='attr_armor_used' value='1' />
+                </td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td colspan='3'>Armor name:<br /><input type='text' name='attr_armor_name2' class='sheet-armor_name' /><br />
+                    In use: <input type='radio' name='attr_armor_used' value='2' />
+                </td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td colspan='3'>Armor name:<br /><input type='text' name='attr_armor_name3' class='sheet-armor_name' /><br />
+                    In use: <input type='radio' name='attr_armor_used' value='3' />
+                </td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><input type='text' name='attr_hits_total' class='sheet-hits' /></td>
+                <td><input type='text' name='attr_damage_total' class='sheet-hits' value='@{damage_head}+@{damage_torso}+@{damage_ra}+@{damage_la}+@{damage_rl}+@{damage_ll}' disabled='disabled' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <th>PV</th>
+                <th>ID</th>
+                <th>AD</th>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <th>PV</th>
+                <th>ID</th>
+                <th>AD</th>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <th>PV</th>
+                <th>ID</th>
+                <th>AD</th>
+            </tr>
+            <tr>
+                <td>Head</td>
+                <td><input type='text' name='attr_hits_head' class='sheet-hits' /></td>
+                <td><input type='text' name='attr_damage_head' class='sheet-damage' value='0' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_head1' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_head1' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_head1' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_head2' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_head2' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_head2' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_head3' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_head3' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_head3' class='sheet-ad' /></td>
+            </tr>
+            <tr>
+                <td>Torso</td>
+                <td><input type='text' name='attr_hits_torso' class='sheet-hits' /></td>
+                <td><input type='text' name='attr_damage_torso' class='sheet-damage' value='0' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_torso1' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_torso1' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_torso1' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_torso2' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_torso2' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_torso2' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_torso3' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_torso3' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_torso3' class='sheet-ad' /></td>
+            </tr>
+            <tr>
+                <td>Right arm</td>
+                <td><input type='text' name='attr_hits_ra' class='sheet-hits' /></td>
+                <td><input type='text' name='attr_damage_ra' class='sheet-damage' value='0' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_ra1' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_ra1' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_ra1' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_ra2' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_ra2' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_ra2' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_ra3' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_ra3' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_ra3' class='sheet-ad' /></td>
+            </tr>
+            <tr>
+                <td>Left arm</td>
+                <td><input type='text' name='attr_hits_la' class='sheet-hits' /></td>
+                <td><input type='text' name='attr_damage_la' class='sheet-damage' value='0' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_la1' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_la1' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_la1' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_la2' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_la2' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_la2' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_la3' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_la3' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_la3' class='sheet-ad' /></td>
+            </tr>
+            <tr>
+                <td>Right leg</td>
+                <td><input type='text' name='attr_hits_rl' class='sheet-hits' /></td>
+                <td><input type='text' name='attr_damage_rl' class='sheet-damage' value='0' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_rl1' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_rl1' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_rl1' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_rl2' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_rl2' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_rl2' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_rl3' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_rl3' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_rl3' class='sheet-ad' /></td>
+            </tr>
+            <tr>
+                <td>Left leg</td>
+                <td><input type='text' name='attr_hits_ll' class='sheet-hits' /></td>
+                <td><input type='text' name='attr_damage_ll' class='sheet-damage' value='0' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_ll1' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_ll1' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_ll1' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_ll2' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_ll2' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_ll2' class='sheet-ad' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td><input type='text' name='attr_pv_ll3' class='sheet-pv' /></td>
+                <td><input type='text' name='attr_id_ll3' class='sheet-id' /></td>
+                <td><input type='text' name='attr_ad_ll3' class='sheet-ad' /></td>
+            </tr>
+            <tr>
+                <td class='sheet-wounds_label'>Wounds</td>
+                <td colspan='2' class='sheet-wounds_value_cell'><input type='text' name='attr_wounds' class='sheet-wounds' /></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td colspan='3'><textarea name='attr_armor_notes_1' class='sheet-armor_notes'></textarea></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td colspan='3'><textarea name='attr_armor_notes_2' class='sheet-armor_notes'></textarea></td>
+                <td class='sheet-armor_divider_column'>&nbsp;</td>
+                <td colspan='3'><textarea name='attr_armor_notes_3' class='sheet-armor_notes'></textarea></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class='sheet-spacer'>&nbsp;</div>
 <!-- sheet tabs -->
-<input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-summary sheet-player-sheet" value="1" checked="checked" />
-<span class="sheet-tab-new sheet-player-sheet">Summary Sheet</span>
+<input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-general sheet-player-sheet" value="1" checked="checked" />
+<span class="sheet-tab-new sheet-player-sheet">General Sheet</span>
 <input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-skills sheet-player-sheet" value="2" />
 <span class="sheet-tab-new sheet-player-sheet">Skill Sheet</span>
 <input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-equipment sheet-player-sheet" value="3" />
@@ -68,676 +299,6 @@
 <input type="radio" name="attr_pcgm" class="sheet-tab-new sheet-tab-ebb sheet-player-sheet" value="4" />
 <span class="sheet-tab-new sheet-player-sheet">Ebb</span>
 <!--Player Sheet Tabs-->
-<!-- Start summary tab -->
-<div class="sheet-tab-content sheet-tab-summary">
-    <div class='sheet-data_container'>
-        <div class='sheet-characteristic_row'>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>STR</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{str} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Strength'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_str' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>DEX</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{dex} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Dexterity'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_dex' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>DIA</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{dia} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Diagnose'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_dia' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>CON</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{con} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] Concentration'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_con' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>CHA</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{cha} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Charisma'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_cha' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>KNOW</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{know} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Knowledge'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_know' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>PHYS</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{phy} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Physique'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_phy' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>COOL</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{cool} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Cool'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_cool' class='sheet-characteristic' />
-                </div>
-            </div>
-        </div>
-        <div class='sheet-characteristic_row'>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>Flux</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{flux} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Flux'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_flux' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>Formulae</div><button type='roll' name='roll_Electronic_locks' value='/em @{character_name} rolls for [[2d10+@{formulae} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Formulae'></button><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_formulae' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item'>
-                <div class='sheet-characteristic_header'>Damage bonus</div><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_damagebonus' class='sheet-characteristic' />
-                </div>
-            </div>
-            <div class='sheet-characteristic_item_initiative'>
-                <div class='sheet-characteristic_header'>Initiative phases</div><br />
-                <div class='sheet-characteristic_field'>
-                    <input type='text' name='attr_initiative_phases' class='sheet-initiative' />
-                </div>
-            </div>
-        </div>
-
-        <div class='sheet-characteristic_row'>
-            <div><b>Movement</b></div>
-            <div class='sheet-movement_block'>Walk <input type='text' name='attr_movement_walk' class='sheet-movement_input' /></div>
-            <div class='sheet-movement_block'>Run <input type='text' name='attr_movement_run' class='sheet-movement_input' /></div>
-            <div class='sheet-movement_block'>Sprint <input type='text' name='attr_movement_sprint' class='sheet-movement_input' /></div>
-            <div class='sheet-movement_block sheet-no_border'>&nbsp;</div>
-            <div class='sheet-movement_block'>Movement<input type='text' name='attr_movement_normal' class='sheet-movement_input' /></div>
-            <div class='sheet-movement_block'>Half&nbsp;move<input type='text' name='attr_movement_half' class='sheet-movement_input' /></div>
-            <div class='sheet-movement_block'>No&nbsp;move<input type='text' name='attr_movement_nomove' class='sheet-movement_input' /></div>
-        </div>
-    </div>
-
-    <div class='sheet-data_container'>
-        <h3>Hitpoints and armor</h3>
-        <table class='sheet-armorAndHitPoints'>
-            <tbody>
-                <tr>
-                    <th>Location</th>
-                    <th>Hits</th>
-                    <th>Damage</th>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td colspan='3'>Armor name:<br /><input type='text' name='attr_armor_name1' class='sheet-armor_name' /><br />
-                        In use: <input type='radio' name='attr_armor_used' value='1' />
-                    </td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td colspan='3'>Armor name:<br /><input type='text' name='attr_armor_name2' class='sheet-armor_name' /><br />
-                        In use: <input type='radio' name='attr_armor_used' value='2' />
-                    </td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td colspan='3'>Armor name:<br /><input type='text' name='attr_armor_name3' class='sheet-armor_name' /><br />
-                        In use: <input type='radio' name='attr_armor_used' value='3' />
-                    </td>
-                </tr>
-                <tr>
-                    <td>Total</td>
-                    <td><input type='text' name='attr_hits_total' class='sheet-hits' /></td>
-                    <td><input type='text' name='attr_damage_total' class='sheet-hits' value='@{damage_head}+@{damage_torso}+@{damage_ra}+@{damage_la}+@{damage_rl}+@{damage_ll}' disabled='disabled' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <th>PV</th>
-                    <th>ID</th>
-                    <th>AD</th>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <th>PV</th>
-                    <th>ID</th>
-                    <th>AD</th>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <th>PV</th>
-                    <th>ID</th>
-                    <th>AD</th>
-                </tr>
-                <tr>
-                    <td>Head</td>
-                    <td><input type='text' name='attr_hits_head' class='sheet-hits' /></td>
-                    <td><input type='text' name='attr_damage_head' class='sheet-damage' value='0' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_head1' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_head1' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_head1' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_head2' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_head2' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_head2' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_head3' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_head3' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_head3' class='sheet-ad' /></td>
-                </tr>
-                <tr>
-                    <td>Torso</td>
-                    <td><input type='text' name='attr_hits_torso' class='sheet-hits' /></td>
-                    <td><input type='text' name='attr_damage_torso' class='sheet-damage' value='0' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_torso1' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_torso1' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_torso1' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_torso2' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_torso2' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_torso2' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_torso3' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_torso3' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_torso3' class='sheet-ad' /></td>
-                </tr>
-                <tr>
-                    <td>Right arm</td>
-                    <td><input type='text' name='attr_hits_ra' class='sheet-hits' /></td>
-                    <td><input type='text' name='attr_damage_ra' class='sheet-damage' value='0' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_ra1' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_ra1' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_ra1' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_ra2' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_ra2' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_ra2' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_ra3' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_ra3' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_ra3' class='sheet-ad' /></td>
-                </tr>
-                <tr>
-                    <td>Left arm</td>
-                    <td><input type='text' name='attr_hits_la' class='sheet-hits' /></td>
-                    <td><input type='text' name='attr_damage_la' class='sheet-damage' value='0' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_la1' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_la1' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_la1' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_la2' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_la2' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_la2' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_la3' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_la3' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_la3' class='sheet-ad' /></td>
-                </tr>
-                <tr>
-                    <td>Right leg</td>
-                    <td><input type='text' name='attr_hits_rl' class='sheet-hits' /></td>
-                    <td><input type='text' name='attr_damage_rl' class='sheet-damage' value='0' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_rl1' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_rl1' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_rl1' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_rl2' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_rl2' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_rl2' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_rl3' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_rl3' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_rl3' class='sheet-ad' /></td>
-                </tr>
-                <tr>
-                    <td>Left leg</td>
-                    <td><input type='text' name='attr_hits_ll' class='sheet-hits' /></td>
-                    <td><input type='text' name='attr_damage_ll' class='sheet-damage' value='0' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_ll1' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_ll1' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_ll1' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_ll2' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_ll2' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_ll2' class='sheet-ad' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td><input type='text' name='attr_pv_ll3' class='sheet-pv' /></td>
-                    <td><input type='text' name='attr_id_ll3' class='sheet-id' /></td>
-                    <td><input type='text' name='attr_ad_ll3' class='sheet-ad' /></td>
-                </tr>
-                <tr>
-                    <td class='sheet-wounds_label'>Wounds</td>
-                    <td colspan='2' class='sheet-wounds_value_cell'><input type='text' name='attr_wounds' class='sheet-wounds' /></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td colspan='3'><textarea name='attr_armor_notes_1' class='sheet-armor_notes'></textarea></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td colspan='3'><textarea name='attr_armor_notes_2' class='sheet-armor_notes'></textarea></td>
-                    <td class='sheet-armor_divider_column'>&nbsp;</td>
-                    <td colspan='3'><textarea name='attr_armor_notes_3' class='sheet-armor_notes'></textarea></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class='sheet-data_container'>
-        <table class='sheet-weapons'>
-            <tbody>
-                <tr>
-                    <th>Weapon</th>
-                    <th>Size</th>
-                    <th>Calibre/type</th>
-                    <th>PEN</th>
-                    <th>DMG</th>
-                    <th>AD</th>
-                    <th>R.O.F</th>
-                    <th>Range</th>
-                    <th>Clip</th>
-                    <th>Ammo</th>
-                    <th>Recoil</th>
-                    <th>To hit mod</th>
-                    <th>Skill</th>
-                </tr>
-                <tr>
-                    <td><input type='text' name='attr_weapon_1_name' class='sheet-weapon_name'></td>
-                    <td><input type='text' name='attr_weapon_1_size' class='sheet-weapon_size'></td>
-                    <td><input type='text' name='attr_weapon_1_calibre' class='sheet-weapon_calibre'></td>
-                    <td><input type='text' name='attr_weapon_1_pen' class='sheet-weapon_pen'></td>
-                    <td><input type='text' name='attr_weapon_1_dmg' class='sheet-weapon_dmg'></td>
-                    <td><input type='text' name='attr_weapon_1_ad' class='sheet-weapon_ad'></td>
-                    <td><input type='text' name='attr_weapon_1_rof' class='sheet-weapon_rof'></td>
-                    <td><input type='text' name='attr_weapon_1_range' class='sheet-weapon_range'> m</td>
-                    <td><input type='text' name='attr_weapon_1_ammo' class='sheet-weapon_ammo'></td>
-                    <td><input type='text' name='attr_weapon_1_clips' class='sheet-weapon_clips'></td>
-                    <td><input type='text' name='attr_weapon_1_recoil' class='sheet-weapon_recoil'></td>
-                    <td><input type='text' name='attr_weapon_1_modifier' class='sheet-weapon_modifier'></td>
-                    <td>
-                        <select name='attr_weapon_1_skill' class='sheet-skillattribute'>
-                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
-                            <option value='@{rank_Archery}'>Archery</option>
-                            <option value='@{rank_Axe}'>Axe</option>
-                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
-                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
-                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
-                            <option value='@{rank_Club_1h}'>Club 1h</option>
-                            <option value='@{rank_Club_2h}'>Club 2h</option>
-                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
-                            <option value='@{rank_Flail}'>Flail</option>
-                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
-                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
-                            <option value='@{rank_Martial_arts}'>Martial arts</option>
-                            <option value='@{rank_Pistol}'>Pistol</option>
-                            <option value='@{rank_Polearm}'>Polearm</option>
-                            <option value='@{rank_Rifle}'>Rifle</option>
-                            <option value='@{rank_Throw}'>Thrown</option>
-                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
-                            <option value='@{rank_Unarmed}'>Unarmed</option>
-                        </select>
-                        <button type='roll' name='roll_weapon_1' value='/em @{character_name} attacks with @{weapon_1_name} (Damage: @{weapon_1_dmg}, PEN: @{weapon_1_pen}, AD: @{weapon_1_ad}), rolling [[2d10 + @{weapon_1_skill} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]]'></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type='text' name='attr_weapon_2_name' class='sheet-weapon_name'></td>
-                    <td><input type='text' name='attr_weapon_2_size' class='sheet-weapon_size'></td>
-                    <td><input type='text' name='attr_weapon_2_calibre' class='sheet-weapon_calibre'></td>
-                    <td><input type='text' name='attr_weapon_2_pen' class='sheet-weapon_pen'></td>
-                    <td><input type='text' name='attr_weapon_2_dmg' class='sheet-weapon_dmg'></td>
-                    <td><input type='text' name='attr_weapon_2_ad' class='sheet-weapon_ad'></td>
-                    <td><input type='text' name='attr_weapon_2_rof' class='sheet-weapon_rof'></td>
-                    <td><input type='text' name='attr_weapon_2_range' class='sheet-weapon_range'> m</td>
-                    <td><input type='text' name='attr_weapon_2_ammo' class='sheet-weapon_ammo'></td>
-                    <td><input type='text' name='attr_weapon_2_clips' class='sheet-weapon_clips'></td>
-                    <td><input type='text' name='attr_weapon_2_recoil' class='sheet-weapon_recoil'></td>
-                    <td><input type='text' name='attr_weapon_2_modifier' class='sheet-weapon_modifier'></td>
-                    <td>
-                        <select name='attr_weapon_2_skill' class='sheet-skillattribute'>
-                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
-                            <option value='@{rank_Archery}'>Archery</option>
-                            <option value='@{rank_Axe}'>Axe</option>
-                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
-                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
-                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
-                            <option value='@{rank_Club_1h}'>Club 1h</option>
-                            <option value='@{rank_Club_2h}'>Club 2h</option>
-                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
-                            <option value='@{rank_Flail}'>Flail</option>
-                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
-                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
-                            <option value='@{rank_Martial_arts}'>Martial arts</option>
-                            <option value='@{rank_Pistol}'>Pistol</option>
-                            <option value='@{rank_Polearm}'>Polearm</option>
-                            <option value='@{rank_Rifle}'>Rifle</option>
-                            <option value='@{rank_Throw}'>Thrown</option>
-                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
-                            <option value='@{rank_Unarmed}'>Unarmed</option>
-                        </select>
-                        <button type='roll' name='roll_weapon_2' value='/em @{character_name} attacks with @{weapon_2_name} (Damage: @{weapon_2_dmg}, PEN: @{weapon_2_pen}, AD: @{weapon_2_ad}), rolling [[2d10 + @{weapon_2_skill} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] to hit'></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type='text' name='attr_weapon_3_name' class='sheet-weapon_name'></td>
-                    <td><input type='text' name='attr_weapon_3_size' class='sheet-weapon_size'></td>
-                    <td><input type='text' name='attr_weapon_3_calibre' class='sheet-weapon_calibre'></td>
-                    <td><input type='text' name='attr_weapon_3_pen' class='sheet-weapon_pen'></td>
-                    <td><input type='text' name='attr_weapon_3_dmg' class='sheet-weapon_dmg'></td>
-                    <td><input type='text' name='attr_weapon_3_ad' class='sheet-weapon_ad'></td>
-                    <td><input type='text' name='attr_weapon_3_rof' class='sheet-weapon_rof'></td>
-                    <td><input type='text' name='attr_weapon_3_range' class='sheet-weapon_range'> m</td>
-                    <td><input type='text' name='attr_weapon_3_ammo' class='sheet-weapon_ammo'></td>
-                    <td><input type='text' name='attr_weapon_3_clips' class='sheet-weapon_clips'></td>
-                    <td><input type='text' name='attr_weapon_3_recoil' class='sheet-weapon_recoil'></td>
-                    <td><input type='text' name='attr_weapon_3_modifier' class='sheet-weapon_modifier'></td>
-                    <td>
-                        <select name='attr_weapon_3_skill' class='sheet-skillattribute'>
-                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
-                            <option value='@{rank_Archery}'>Archery</option>
-                            <option value='@{rank_Axe}'>Axe</option>
-                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
-                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
-                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
-                            <option value='@{rank_Club_1h}'>Club 1h</option>
-                            <option value='@{rank_Club_2h}'>Club 2h</option>
-                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
-                            <option value='@{rank_Flail}'>Flail</option>
-                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
-                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
-                            <option value='@{rank_Martial_arts}'>Martial arts</option>
-                            <option value='@{rank_Pistol}'>Pistol</option>
-                            <option value='@{rank_Polearm}'>Polearm</option>
-                            <option value='@{rank_Rifle}'>Rifle</option>
-                            <option value='@{rank_Throw}'>Thrown</option>
-                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
-                            <option value='@{rank_Unarmed}'>Unarmed</option>
-                        </select>
-                        <button type='roll' name='roll_weapon_3' value='/em @{character_name} attacks with @{weapon_3_name} (Damage: @{weapon_3_dmg}, PEN: @{weapon_3_pen}, AD: @{weapon_3_ad}), rolling [[2d10 + @{weapon_3_skill} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]]'></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type='text' name='attr_weapon_4_name' class='sheet-weapon_name'></td>
-                    <td><input type='text' name='attr_weapon_4_size' class='sheet-weapon_size'></td>
-                    <td><input type='text' name='attr_weapon_4_calibre' class='sheet-weapon_calibre'></td>
-                    <td><input type='text' name='attr_weapon_4_pen' class='sheet-weapon_pen'></td>
-                    <td><input type='text' name='attr_weapon_4_dmg' class='sheet-weapon_dmg'></td>
-                    <td><input type='text' name='attr_weapon_4_ad' class='sheet-weapon_ad'></td>
-                    <td><input type='text' name='attr_weapon_4_rof' class='sheet-weapon_rof'></td>
-                    <td><input type='text' name='attr_weapon_4_range' class='sheet-weapon_range'> m</td>
-                    <td><input type='text' name='attr_weapon_4_ammo' class='sheet-weapon_ammo'></td>
-                    <td><input type='text' name='attr_weapon_4_clips' class='sheet-weapon_clips'></td>
-                    <td><input type='text' name='attr_weapon_4_recoil' class='sheet-weapon_recoil'></td>
-                    <td><input type='text' name='attr_weapon_4_modifier' class='sheet-weapon_modifier'></td>
-                    <td>
-                        <select name='attr_weapon_4_skill' class='sheet-skillattribute'>
-                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
-                            <option value='@{rank_Archery}'>Archery</option>
-                            <option value='@{rank_Axe}'>Axe</option>
-                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
-                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
-                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
-                            <option value='@{rank_Club_1h}'>Club 1h</option>
-                            <option value='@{rank_Club_2h}'>Club 2h</option>
-                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
-                            <option value='@{rank_Flail}'>Flail</option>
-                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
-                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
-                            <option value='@{rank_Martial_arts}'>Martial arts</option>
-                            <option value='@{rank_Pistol}'>Pistol</option>
-                            <option value='@{rank_Polearm}'>Polearm</option>
-                            <option value='@{rank_Rifle}'>Rifle</option>
-                            <option value='@{rank_Throw}'>Thrown</option>
-                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
-                            <option value='@{rank_Unarmed}'>Unarmed</option>
-                        </select>
-                        <button type='roll' name='roll_weapon_4' value='/em @{character_name} attacks with @{weapon_4_name} (Damage: @{weapon_4_dmg}, PEN: @{weapon_4_pen}, AD: @{weapon_4_ad}), rolling [[2d10 + @{weapon_4_skill} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]]'></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type='text' name='attr_weapon_5_name' class='sheet-weapon_name'></td>
-                    <td><input type='text' name='attr_weapon_5_size' class='sheet-weapon_size'></td>
-                    <td><input type='text' name='attr_weapon_5_calibre' class='sheet-weapon_calibre'></td>
-                    <td><input type='text' name='attr_weapon_5_pen' class='sheet-weapon_pen'></td>
-                    <td><input type='text' name='attr_weapon_5_dmg' class='sheet-weapon_dmg'></td>
-                    <td><input type='text' name='attr_weapon_5_ad' class='sheet-weapon_ad'></td>
-                    <td><input type='text' name='attr_weapon_5_rof' class='sheet-weapon_rof'></td>
-                    <td><input type='text' name='attr_weapon_5_range' class='sheet-weapon_range'> m</td>
-                    <td><input type='text' name='attr_weapon_5_ammo' class='sheet-weapon_ammo'></td>
-                    <td><input type='text' name='attr_weapon_5_clips' class='sheet-weapon_clips'></td>
-                    <td><input type='text' name='attr_weapon_5_recoil' class='sheet-weapon_recoil'></td>
-                    <td><input type='text' name='attr_weapon_5_modifier' class='sheet-weapon_modifier'></td>
-                    <td>
-                        <select name='attr_weapon_5_skill' class='sheet-skillattribute'>
-                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
-                            <option value='@{rank_Archery}'>Archery</option>
-                            <option value='@{rank_Axe}'>Axe</option>
-                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
-                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
-                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
-                            <option value='@{rank_Club_1h}'>Club 1h</option>
-                            <option value='@{rank_Club_2h}'>Club 2h</option>
-                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
-                            <option value='@{rank_Flail}'>Flail</option>
-                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
-                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
-                            <option value='@{rank_Martial_arts}'>Martial arts</option>
-                            <option value='@{rank_Pistol}'>Pistol</option>
-                            <option value='@{rank_Polearm}'>Polearm</option>
-                            <option value='@{rank_Rifle}'>Rifle</option>
-                            <option value='@{rank_Throw}'>Thrown</option>
-                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
-                            <option value='@{rank_Unarmed}'>Unarmed</option>
-                        </select>
-                        <button type='roll' name='roll_weapon_5' value='/em @{character_name} attacks with @{weapon_5_name} (Damage: @{weapon_5_dmg}, PEN: @{weapon_5_pen}, AD: @{weapon_5_ad}), rolling [[2d10 + @{weapon_5_skill} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]]'></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type='text' name='attr_weapon_6_name' class='sheet-weapon_name'></td>
-                    <td><input type='text' name='attr_weapon_6_size' class='sheet-weapon_size'></td>
-                    <td><input type='text' name='attr_weapon_6_calibre' class='sheet-weapon_calibre'></td>
-                    <td><input type='text' name='attr_weapon_6_pen' class='sheet-weapon_pen'></td>
-                    <td><input type='text' name='attr_weapon_6_dmg' class='sheet-weapon_dmg'></td>
-                    <td><input type='text' name='attr_weapon_6_ad' class='sheet-weapon_ad'></td>
-                    <td><input type='text' name='attr_weapon_6_rof' class='sheet-weapon_rof'></td>
-                    <td><input type='text' name='attr_weapon_6_range' class='sheet-weapon_range'> m</td>
-                    <td><input type='text' name='attr_weapon_6_ammo' class='sheet-weapon_ammo'></td>
-                    <td><input type='text' name='attr_weapon_6_clips' class='sheet-weapon_clips'></td>
-                    <td><input type='text' name='attr_weapon_6_recoil' class='sheet-weapon_recoil'></td>
-                    <td><input type='text' name='attr_weapon_6_modifier' class='sheet-weapon_modifier'></td>
-                    <td>
-                        <select name='attr_weapon_6_skill' class='sheet-skillattribute'>
-                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
-                            <option value='@{rank_Archery}'>Archery</option>
-                            <option value='@{rank_Axe}'>Axe</option>
-                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
-                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
-                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
-                            <option value='@{rank_Club_1h}'>Club 1h</option>
-                            <option value='@{rank_Club_2h}'>Club 2h</option>
-                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
-                            <option value='@{rank_Flail}'>Flail</option>
-                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
-                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
-                            <option value='@{rank_Martial_arts}'>Martial arts</option>
-                            <option value='@{rank_Pistol}'>Pistol</option>
-                            <option value='@{rank_Polearm}'>Polearm</option>
-                            <option value='@{rank_Rifle}'>Rifle</option>
-                            <option value='@{rank_Throw}'>Thrown</option>
-                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
-                            <option value='@{rank_Unarmed}'>Unarmed</option>
-                        </select>
-                        <button type='roll' name='roll_weapon_6' value='/em @{character_name} attacks with @{weapon_6_name} (Damage: @{weapon_6_dmg}, PEN: @{weapon_6_pen}, AD: @{weapon_6_ad}), rolling [[2d10 + @{weapon_6_skill} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]]'></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type='text' name='attr_weapon_7_name' class='sheet-weapon_name'></td>
-                    <td><input type='text' name='attr_weapon_7_size' class='sheet-weapon_size'></td>
-                    <td><input type='text' name='attr_weapon_7_calibre' class='sheet-weapon_calibre'></td>
-                    <td><input type='text' name='attr_weapon_7_pen' class='sheet-weapon_pen'></td>
-                    <td><input type='text' name='attr_weapon_7_dmg' class='sheet-weapon_dmg'></td>
-                    <td><input type='text' name='attr_weapon_7_ad' class='sheet-weapon_ad'></td>
-                    <td><input type='text' name='attr_weapon_7_rof' class='sheet-weapon_rof'></td>
-                    <td><input type='text' name='attr_weapon_7_range' class='sheet-weapon_range'> m</td>
-                    <td><input type='text' name='attr_weapon_7_ammo' class='sheet-weapon_ammo'></td>
-                    <td><input type='text' name='attr_weapon_7_clips' class='sheet-weapon_clips'></td>
-                    <td><input type='text' name='attr_weapon_7_recoil' class='sheet-weapon_recoil'></td>
-                    <td><input type='text' name='attr_weapon_7_modifier' class='sheet-weapon_modifier'></td>
-                    <td>
-                        <select name='attr_weapon_7_skill' class='sheet-skillattribute'>
-                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
-                            <option value='@{rank_Archery}'>Archery</option>
-                            <option value='@{rank_Axe}'>Axe</option>
-                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
-                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
-                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
-                            <option value='@{rank_Club_1h}'>Club 1h</option>
-                            <option value='@{rank_Club_2h}'>Club 2h</option>
-                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
-                            <option value='@{rank_Flail}'>Flail</option>
-                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
-                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
-                            <option value='@{rank_Martial_arts}'>Martial arts</option>
-                            <option value='@{rank_Pistol}'>Pistol</option>
-                            <option value='@{rank_Polearm}'>Polearm</option>
-                            <option value='@{rank_Rifle}'>Rifle</option>
-                            <option value='@{rank_Throw}'>Thrown</option>
-                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
-                            <option value='@{rank_Unarmed}'>Unarmed</option>
-                        </select>
-                        <button type='roll' name='roll_weapon_7' value='/em @{character_name} attacks with @{weapon_7_name} (Damage: @{weapon_7_dmg}, PEN: @{weapon_7_pen}, AD: @{weapon_7_ad}), rolling [[2d10 + @{weapon_7_skill} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]]'></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type='text' name='attr_weapon_8_name' class='sheet-weapon_name'></td>
-                    <td><input type='text' name='attr_weapon_8_size' class='sheet-weapon_size'></td>
-                    <td><input type='text' name='attr_weapon_8_calibre' class='sheet-weapon_calibre'></td>
-                    <td><input type='text' name='attr_weapon_8_pen' class='sheet-weapon_pen'></td>
-                    <td><input type='text' name='attr_weapon_8_dmg' class='sheet-weapon_dmg'></td>
-                    <td><input type='text' name='attr_weapon_8_ad' class='sheet-weapon_ad'></td>
-                    <td><input type='text' name='attr_weapon_8_rof' class='sheet-weapon_rof'></td>
-                    <td><input type='text' name='attr_weapon_8_range' class='sheet-weapon_range'> m</td>
-                    <td><input type='text' name='attr_weapon_8_ammo' class='sheet-weapon_ammo'></td>
-                    <td><input type='text' name='attr_weapon_8_clips' class='sheet-weapon_clips'></td>
-                    <td><input type='text' name='attr_weapon_8_recoil' class='sheet-weapon_recoil'></td>
-                    <td><input type='text' name='attr_weapon_8_modifier' class='sheet-weapon_modifier'></td>
-                    <td>
-                        <select name='attr_weapon_8_skill' class='sheet-skillattribute'>
-                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
-                            <option value='@{rank_Archery}'>Archery</option>
-                            <option value='@{rank_Axe}'>Axe</option>
-                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
-                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
-                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
-                            <option value='@{rank_Club_1h}'>Club 1h</option>
-                            <option value='@{rank_Club_2h}'>Club 2h</option>
-                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
-                            <option value='@{rank_Flail}'>Flail</option>
-                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
-                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
-                            <option value='@{rank_Martial_arts}'>Martial arts</option>
-                            <option value='@{rank_Pistol}'>Pistol</option>
-                            <option value='@{rank_Polearm}'>Polearm</option>
-                            <option value='@{rank_Rifle}'>Rifle</option>
-                            <option value='@{rank_Throw}'>Thrown</option>
-                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
-                            <option value='@{rank_Unarmed}'>Unarmed</option>
-                        </select>
-                        <button type='roll' name='roll_weapon_8' value='/em @{character_name} attacks with @{weapon_8_name} (Damage: @{weapon_8_dmg}, PEN: @{weapon_8_pen}, AD: @{weapon_8_ad}), rolling [[2d10 + @{weapon_8_skill} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]]'></button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class='sheet-data_container'>
-        <fieldset class='repeating_skills'>
-
-            <div class='sheet-weapon_box'>
-                <div class='sheet-weapon_stat'>Name: 
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_name' class='sheet-weapon_name'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>Size: 
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_size' class='sheet-weapon_size'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>Calibre:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_calibre' class='sheet-weapon_calibre'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>Ammotype:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_ammotype' class='sheet-weapon_ammotype'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>PEN:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_pen' class='sheet-weapon_pen'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>DMG:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_dmg' class='sheet-weapon_dmg'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>AD:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_ad' class='sheet-weapon_ad'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>ROF:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_rof' class='sheet-weapon_rof'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>Range:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_range' class='sheet-weapon_range'> m
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>Ammo:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_ammo' class='sheet-weapon_ammo'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>Clips:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_clips' class='sheet-weapon_clips'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>Recoil:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_recoil' class='sheet-weapon_recoil'>
-                    </div>
-                </div>
-                <div class='sheet-weapon_stat'>Notes:
-                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_notes' class='sheet-weapon_notes'>
-                    </div>
-                </div>
-
-                <div class='sheet-weapon_stat'>Skill:
-                    <div class='sheet-weapon_stat_input'>
-                        <select name='attr_weapon_1_skill' class='sheet-skillattribute'>
-                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
-                            <option value='@{rank_Archery}'>Archery</option>
-                            <option value='@{rank_Axe}'>Axe</option>
-                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
-                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
-                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
-                            <option value='@{rank_Club_1h}'>Club 1h</option>
-                            <option value='@{rank_Club_2h}'>Club 2h</option>
-                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
-                            <option value='@{rank_Flail}'>Flail</option>
-                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
-                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
-                            <option value='@{rank_Martial_arts}'>Martial arts</option>
-                            <option value='@{rank_Pistol}'>Pistol</option>
-                            <option value='@{rank_Polearm}'>Polearm</option>
-                            <option value='@{rank_Rifle}'>Rifle</option>
-                            <option value='@{rank_Throw}'>Thrown</option>
-                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
-                            <option value='@{rank_Unarmed}'>Unarmed</option>
-                        </select>
-                        <button type='roll' name='roll_weapon_1' value='/em @{character_name} attacks with @{weapon_1_name} (AMmo type: @{ammotype}, Damage: @{weapon_1_dmg}, PEN: @{weapon_1_pen}, AD: @{weapon_1_ad}), rolling [[2d10 + @{weapon_1_skill} + ?{Modifier for roll|0} - @{wounds}]]'></button>
-                    </div>
-                </div>
-            </div>
-        </fieldset>
-    </div>
-    <div class='sheet-data_container'>
-        <h4>General Equipments (Simplified)</h4>
-        <textarea rows='10' cols='80' name='attr_simple_general_equipments' class='sheet-simple_equipments'></textarea>
-    </div>
-    <div class='sheet-data_container'>
-        <h4>Advantages / Disadvantages</h4>
-        <textarea rows='10' cols='80' name='attr_advantages' class='sheet-advantanges'></textarea>
-    </div>
-    <div class='sheet-data_container'>
-        <h4>Notes</h4>
-        <textarea rows='30' cols='80' name='attr_notes'  class='sheet-notes'></textarea>
-    </div>
-</div>
 
 <!-- Start skill tab -->
 <div class="sheet-tab-content sheet-tab-skills">
@@ -936,86 +497,6 @@
                     <td><input type='text' name='attr_rank_Willpower' class='sheet-skillrank' value='-3' /></td>
                     <td><input type='text' disabled='disabled' name='attr_max-Willpower' value='@{dia}' class='sheet-skillmax' /></td>
                     <td><button type='roll' name='roll_Willpower' value='/em @{character_name} rolls [[ 2d10+@{rank_Willpower} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Willpower'></button></td>
-                </tr>
-
-                <tr><td colspan='4'><h4>Flux Skills</h4></td></tr>
-                <tr>
-                    <td>Blast</td>
-                    <td><input type='text' name='attr_rank_Blast' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Blast' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Blast' value='/em @{character_name} rolls [[ 2d10+@{rank_Blast} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Blast'></button></td>
-                </tr>
-                <tr>
-                    <td>Blue Thermal</td>
-                    <td><input type='text' name='attr_rank_Blue_Thermal' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Blue_Thermal' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Blue_Thermal' value='/em @{character_name} rolls [[ 2d10+@{rank_Blue_Thermal} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Blue Thermal'></button></td>
-                </tr>
-                <tr>
-                    <td>Communication</td>
-                    <td><input type='text' name='attr_rank_Communication' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Communication' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Communication' value='/em @{character_name} rolls [[ 2d10+@{rank_Communication} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Communication'></button></td>
-                </tr>
-                <tr>
-                    <td>Ebb Detect</td>
-                    <td><input type='text' name='attr_rank_Ebb_Detect' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Ebb_Detect' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Ebb_Detect' value='/em @{character_name} rolls [[ 2d10+@{rank_Ebb_Detect} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Ebb Detect'></button></td>
-                </tr>
-                <tr>
-                    <td>Enhancement</td>
-                    <td><input type='text' name='attr_rank_Enhancement' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Enhancement' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Enhancement' value='/em @{character_name} rolls [[ 2d10+@{rank_Enhancement} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Enhancement'></button></td>
-                </tr>
-                <tr>
-                    <td>Healing</td>
-                    <td><input type='text' name='attr_rank_Healing' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Healing' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Healing' value='/em @{character_name} rolls [[ 2d10+@{rank_Healing} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Healing'></button></td>
-                </tr>
-                <tr>
-                    <td>Illumination</td>
-                    <td><input type='text' name='attr_rank_Illumination' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Illumination' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Illumination' value='/em @{character_name} rolls [[ 2d10+@{rank_Illumination} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Illumination'></button></td>
-                </tr>
-                <tr>
-                    <td>Protect</td>
-                    <td><input type='text' name='attr_rank_Protect' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Protect' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Protect' value='/em @{character_name} rolls [[ 2d10+@{rank_Protect} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Protect'></button></td>
-                </tr>
-                <tr>
-                    <td>Reality fold</td>
-                    <td><input type='text' name='attr_rank_Reality_fold' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Reality_fold' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Reality_fold' value='/em @{character_name} rolls [[ 2d10+@{rank_Reality_fold} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Reality fold'></button></td>
-                </tr>
-                <tr>
-                    <td>Red Thermal</td>
-                    <td><input type='text' name='attr_rank_Red_Thermal' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Red_Thermal' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Red_Thermal' value='/em @{character_name} rolls [[ 2d10+@{rank_Red_Thermal} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Red Thermal'></button></td>
-                </tr>
-                <tr>
-                    <td>Senses|Vision;Hearing</td>
-                    <td><input type='text' name='attr_rank_Senses-Vision;Hearing' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Senses|Vision;Hearing' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Senses|Vision;Hearing' value='/em @{character_name} rolls [[ 2d10+@{rank_Senses_Vision;Hearing} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Senses|Vision;Hearing'></button></td>
-                </tr>
-                <tr>
-                    <td>Telekinesis</td>
-                    <td><input type='text' name='attr_rank_Telekinesis' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Telekinesis' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Telekinesis' value='/em @{character_name} rolls [[ 2d10+@{rank_Telekinesis} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Telekinesis'></button></td>
-                </tr>
-                <tr>
-                    <td>Gore cannon</td>
-                    <td><input type='text' name='attr_rank_Gore_cannon' class='sheet-skillrank' value='-3' /></td>
-                    <td><input type='text' disabled='disabled' name='attr_max-Gore_cannon' value='20' class='sheet-skillmax' /></td>
-                    <td><button type='roll' name='roll_Gore_cannon' value='/em @{character_name} rolls [[ 2d10+@{rank_Gore_cannon} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Gore cannon'></button></td>
                 </tr>
 
                 <tr><td colspan='4'><h4>Dexterity Skills</h4></td></tr>
@@ -1629,6 +1110,96 @@
     <h3>Equipments</h3>
 
     <div class='sheet-data_container'>
+        <fieldset class='repeating_skills'>
+
+            <div class='sheet-weapon_box'>
+                <div class='sheet-weapon_stat'>Name: 
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_name' class='sheet-weapon_name'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>Size: 
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_size' class='sheet-weapon_size'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>Calibre:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_calibre' class='sheet-weapon_calibre'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>Ammotype:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_ammotype' class='sheet-weapon_ammotype'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>PEN:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_pen' class='sheet-weapon_pen'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>DMG:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_dmg' class='sheet-weapon_dmg'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>AD:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_ad' class='sheet-weapon_ad'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>ROF:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_rof' class='sheet-weapon_rof'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>Range:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_range' class='sheet-weapon_range'> m
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>Ammo:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_ammo' class='sheet-weapon_ammo'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>Clips:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_clips' class='sheet-weapon_clips'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>Recoil:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_recoil' class='sheet-weapon_recoil'>
+                    </div>
+                </div>
+                <div class='sheet-weapon_stat'>Notes:
+                    <div class='sheet-weapon_stat_input'><input type='text' name='attr_weapon_1_notes' class='sheet-weapon_notes'>
+                    </div>
+                </div>
+
+                <div class='sheet-weapon_stat'>Skill:
+                    <div class='sheet-weapon_stat_input'>
+                        <select name='attr_weapon_1_skill' class='sheet-skillattribute'>
+                            <option value='@{rank_Unskilled}'>Choose skills (unskilled)</option>
+                            <option value='@{rank_Archery}'>Archery</option>
+                            <option value='@{rank_Axe}'>Axe</option>
+                            <option value='@{rank_Blade_1h}'>Blade 1h</option>
+                            <option value='@{rank_Blade_2h}'>Blade 2h</option>
+                            <option value='@{rank_Chainaxe}'>Chainaxe</option>
+                            <option value='@{rank_Club_1h}'>Club 1h</option>
+                            <option value='@{rank_Club_2h}'>Club 2h</option>
+                            <option value='@{rank_Extreme_Violence}'>Extreme Violence</option>
+                            <option value='@{rank_Flail}'>Flail</option>
+                            <option value='@{rank_Flexible_Weapons}'>Flexible Weapons</option>
+                            <option value='@{rank_Industrial_Weaponry:}'>Industrial Weaponry</option>
+                            <option value='@{rank_Martial_arts}'>Martial arts</option>
+                            <option value='@{rank_Pistol}'>Pistol</option>
+                            <option value='@{rank_Polearm}'>Polearm</option>
+                            <option value='@{rank_Rifle}'>Rifle</option>
+                            <option value='@{rank_Throw}'>Thrown</option>
+                            <option value='@{rank_Trick_Shot}'>Trick Shot</option>
+                            <option value='@{rank_Unarmed}'>Unarmed</option>
+                        </select>
+                        <button type='roll' name='roll_weapon_1' value='/em @{character_name} attacks with @{weapon_1_name} (AMmo type: @{ammotype}, Damage: @{weapon_1_dmg}, PEN: @{weapon_1_pen}, AD: @{weapon_1_ad}), rolling [[2d10 + @{weapon_1_skill} + ?{Modifier for roll|0} - @{wounds}]]'></button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class='sheet-data_container'>
+        <h4>General Equipments (Simplified)</h4>
+        <textarea rows='10' cols='80' name='attr_simple_general_equipments' class='sheet-simple_equipments'></textarea>
+    </div>
+    <div class='sheet-data_container'>
         <h4>Drugs</h4>
 
         <table>
@@ -1671,8 +1242,10 @@
             </table>
         </fieldset>
     </div>
-    
+
     <div class='sheet-data_container'>
+
+        
         <h4>General Equipments</h4>
 
         <table>
@@ -1780,51 +1353,199 @@
     </div>
 </div>
 <div class="sheet-tab-content sheet-tab-ebb">
-        <h3>Ebb</h3>
-        <div class='sheet-data_container'>
-                <h4>Flux</h4>
-        
-                <table>
-                    <tbody>
-                        <tr>
-                            <th class='sheet-flux_carried_col'>Carried</th>
-                            <th class='sheet-flux_name_col'>Name</th>
-                            <th class='sheet-flux_flux_max'>Flux max</th>
-                            <th class='sheet-flux_flux'>flux stored</th>
-                            <th class='sheet-flux_weight'>Weight</th>
-                            <th class='sheet-flux_notes_col'>Notes</th>
-                        </tr>
-                    </tbody>
-                </table>
-        
-                <fieldset class='repeating_flux'>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td class='sheet-flux_carried_col'>
-                                    <input type='checkbox' name='attr_flux_carried' value='1'>
-                                </td>
-                                <td class='sheet-flux_name_col'>
-                                    <input type='text' name='attr_flux_name' class='sheet-flux_name' />
-                                </td>
-                                <td class='sheet-flux_max_col'>
-                                    <input type='text' name='attr_flux_flux_max' class='sheet-flux_max' />
-                                </td>
-                                <td class='sheet-flux_flux_flux_col'>
-                                    <input type='text' name='attr_flux_flux' class='sheet-flux_flux' />
-                                </td>
-                                <td class='sheet-flux_weight_col'>
-                                        <input type='text' name='attr_flux_weight' class='sheet-flux_weight' />
-                                </td>
-                                <td class='sheet-flux_notes_col'>
-                                    <input type='text' name='attr_flux_notes' class='sheet-flux_notes' />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </fieldset>
-            </div>
-</div>    
+    <h3>Ebb</h3>
+    <div class='sheet-data_container'>
+        <div>
+            Formulae:  <input type='text' name='attr_formulae' class='sheet-characteristic' value='0' />
+        </div>        
+    </div>
+    <div class='sheet-data_container'>
+        <h4>Flux</h4>
+
+
+        <table>
+            <tbody>
+                <tr>
+                    <th class='sheet-flux_carried_col'>Carried</th>
+                    <th class='sheet-flux_name_col'>Name</th>
+                    <th class='sheet-flux_flux_max'>Flux max</th>
+                    <th class='sheet-flux_flux'>flux stored</th>
+                    <th class='sheet-flux_weight'>Weight</th>
+                    <th class='sheet-flux_notes_col'>Notes</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <fieldset class='repeating_flux'>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class='sheet-flux_carried_col'>
+                            <input type='checkbox' name='attr_flux_carried' value='1'>
+                        </td>
+                        <td class='sheet-flux_name_col'>
+                            <input type='text' name='attr_flux_name' class='sheet-flux_name' />
+                        </td>
+                        <td class='sheet-flux_max_col'>
+                            <input type='text' name='attr_flux_flux_max' class='sheet-flux_max' />
+                        </td>
+                        <td class='sheet-flux_flux_flux_col'>
+                            <input type='text' name='attr_flux_flux' class='sheet-flux_flux' />
+                        </td>
+                        <td class='sheet-flux_weight_col'>
+                            <input type='text' name='attr_flux_weight' class='sheet-flux_weight' />
+                        </td>
+                        <td class='sheet-flux_notes_col'>
+                            <input type='text' name='attr_flux_notes' class='sheet-flux_notes' />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+    <div class='sheet-data_container'>
+    <h4>Ebb equipments</h4>
+
+
+    <table>
+        <tbody>
+            <tr>
+                <th class='sheet-ebbequipment_carried_col'>Carried</th>
+                <th class='sheet-ebbequipment_name_col'>Name</th>
+                <th class='sheet-ebbequipment_flux_max'>Flux max</th>
+                <th class='sheet-ebbequipment_flux'>flux stored</th>
+                <th class='sheet-ebbequipment_weight'>Weight</th>
+                <th class='sheet-ebbequipment_notes_col'>Notes</th>
+            </tr>
+        </tbody>
+    </table>
+
+    <fieldset class='repeating_ebbequipment'>
+        <table>
+            <tbody>
+                <tr>
+                    <td class='sheet-ebbequipment_carried_col'>
+                        <input type='checkbox' name='attr_ebbequipment_carried' value='1'>
+                    </td>
+                    <td class='sheet-ebbequipment_name_col'>
+                        <input type='text' name='attr_ebbequipment_name' class='sheet-ebbequipment_name' />
+                    </td>
+                    <td class='sheet-ebbequipment_max_col'>
+                        <input type='text' name='attr_ebbequipment_flux_max' class='sheet-ebbequipment_max' />
+                    </td>
+                    <td class='sheet-ebbequipment_flux_flux_col'>
+                        <input type='text' name='attr_ebbequipment_flux' class='sheet-ebbequipment_flux' />
+                    </td>
+                    <td class='sheet-ebbequipment_weight_col'>
+                        <input type='text' name='attr_ebbequipment_weight' class='sheet-ebbequipment_weight' />
+                    </td>
+                    <td class='sheet-ebbequipment_notes_col'>
+                        <input type='text' name='attr_ebbequipment_notes' class='sheet-ebbequipment_notes' />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    </div>
+
+    <div class='sheet-data_container'>
+        <table>
+            <tbody>
+
+                <tr><td colspan='4'><h4>Ebb Skills</h4></td></tr>
+                <tr>
+                    <td>Blast</td>
+                    <td><input type='text' name='attr_rank_Blast' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Blast' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Blast' value='/em @{character_name} rolls [[ 2d10+@{rank_Blast} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Blast'></button></td>
+                </tr>
+                <tr>
+                    <td>Blue Thermal</td>
+                    <td><input type='text' name='attr_rank_Blue_Thermal' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Blue_Thermal' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Blue_Thermal' value='/em @{character_name} rolls [[ 2d10+@{rank_Blue_Thermal} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Blue Thermal'></button></td>
+                </tr>
+                <tr>
+                    <td>Communication</td>
+                    <td><input type='text' name='attr_rank_Communication' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Communication' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Communication' value='/em @{character_name} rolls [[ 2d10+@{rank_Communication} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Communication'></button></td>
+                </tr>
+                <tr>
+                    <td>Ebb Detect</td>
+                    <td><input type='text' name='attr_rank_Ebb_Detect' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Ebb_Detect' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Ebb_Detect' value='/em @{character_name} rolls [[ 2d10+@{rank_Ebb_Detect} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Ebb Detect'></button></td>
+                </tr>
+                <tr>
+                    <td>Enhancement</td>
+                    <td><input type='text' name='attr_rank_Enhancement' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Enhancement' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Enhancement' value='/em @{character_name} rolls [[ 2d10+@{rank_Enhancement} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Enhancement'></button></td>
+                </tr>
+                <tr>
+                    <td>Healing</td>
+                    <td><input type='text' name='attr_rank_Healing' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Healing' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Healing' value='/em @{character_name} rolls [[ 2d10+@{rank_Healing} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Healing'></button></td>
+                </tr>
+                <tr>
+                    <td>Illumination</td>
+                    <td><input type='text' name='attr_rank_Illumination' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Illumination' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Illumination' value='/em @{character_name} rolls [[ 2d10+@{rank_Illumination} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Illumination'></button></td>
+                </tr>
+                <tr>
+                    <td>Protect</td>
+                    <td><input type='text' name='attr_rank_Protect' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Protect' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Protect' value='/em @{character_name} rolls [[ 2d10+@{rank_Protect} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Protect'></button></td>
+                </tr>
+                <tr>
+                    <td>Reality fold</td>
+                    <td><input type='text' name='attr_rank_Reality_fold' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Reality_fold' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Reality_fold' value='/em @{character_name} rolls [[ 2d10+@{rank_Reality_fold} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Reality fold'></button></td>
+                </tr>
+                <tr>
+                    <td>Red Thermal</td>
+                    <td><input type='text' name='attr_rank_Red_Thermal' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Red_Thermal' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Red_Thermal' value='/em @{character_name} rolls [[ 2d10+@{rank_Red_Thermal} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Red Thermal'></button></td>
+                </tr>
+                <tr>
+                    <td>Senses|Vision;Hearing</td>
+                    <td><input type='text' name='attr_rank_Senses-Vision;Hearing' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Senses|Vision;Hearing' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Senses|Vision;Hearing' value='/em @{character_name} rolls [[ 2d10+@{rank_Senses_Vision;Hearing} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Senses|Vision;Hearing'></button></td>
+                </tr>
+                <tr>
+                    <td>Telekinesis</td>
+                    <td><input type='text' name='attr_rank_Telekinesis' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Telekinesis' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Telekinesis' value='/em @{character_name} rolls [[ 2d10+@{rank_Telekinesis} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Telekinesis'></button></td>
+                </tr>
+                <tr>
+                    <td>Gore cannon</td>
+                    <td><input type='text' name='attr_rank_Gore_cannon' class='sheet-skillrank' value='-3' /></td>
+                    <td><input type='text' disabled='disabled' name='attr_max-Gore_cannon' value='20' class='sheet-skillmax' /></td>
+                    <td><button type='roll' name='roll_Gore_cannon' value='/em @{character_name} rolls [[ 2d10+@{rank_Gore_cannon} + ?{Modifier for roll|0} - @{wounds} + @{difficulty}]] for Gore cannon'></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="sheet-tab-content sheet-tab-general">
+    <h3>General</h3>
+    <div class='sheet-data_container'>
+        <h4>Advantages / Disadvantages</h4>
+        <textarea rows='10' cols='80' name='attr_advantages' class='sheet-advantanges'></textarea>
+    </div>
+    <div class='sheet-data_container'>
+        <h4>Notes</h4>
+        <textarea rows='30' cols='80' name='attr_notes'  class='sheet-notes'></textarea>
+    </div>
+</div>
 <script type='text/worker'>
     on("change:damage_head change:damage_torso change:damage_ra change:damage_la change:damage_rl change:damage_ll", function() {
         getAttrs(["damage_head","damage_torso","damage_ra","damage_la","damage_rl","damage_ll"], function(list) {

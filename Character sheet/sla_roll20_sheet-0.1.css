@@ -145,6 +145,7 @@ textarea.sheet-simple_equipments {
 input.sheet-tab-summary:checked ~ div.sheet-tab-summary,
 input.sheet-tab-skills:checked ~ div.sheet-tab-skills,
 input.sheet-tab-ebb:checked ~ div.sheet-tab-ebb,
+input.sheet-tab-general:checked ~ div.sheet-tab-general,
 input.sheet-tab-equipment:checked ~ div.sheet-tab-equipment {
     display: block;
 }
@@ -218,6 +219,309 @@ input.sheet-tab-new:checked + span {
     width: 100px;
 }
 .sheet-armor_name {
+    width: 200px;
+}
+input.sheet-weapon_modifier {
+    width: 50px;
+}
+input.sheet-armor-pv {
+    width: 50px;
+}
+input.sheet-armor-id {
+    width: 50px;
+}
+input.sheet-armor-note {
+    width: 300px;
+}
+textarea.sheet-armor_note {
+    width: 90%;
+    height: 5em;
+}
+td.sheet-armor_divider_column {
+    background: #eee;
+}
+textarea.sheet-armor_notes {
+    width: 120px;
+    font-size: 0.8em;
+}
+input.sheet-armor_name {
+    width: 120px;
+    font-size: 0.8em;
+}
+.sheet-wounds_label, .sheet-wounds_value_cell {
+    text-align: top;
+}
+th.sheet-equipment_carried_col, td.sheet-equipment_carried_col {
+    width: 50px;
+    display: inline-block;
+    padding: 0px;
+    text-align: center;
+}
+th.sheet-equipment_name_col, td.sheet-equipment_name_col {
+    width: 200px;
+    display: inline-block;
+    padding: 0px;
+}
+th.sheet-equipment_notes_col, td.sheet-equipment_notes_col {
+    width: 300px;
+    display: inline-block;
+    padding: 0px;
+}
+th.sheet-equipment_weight_col, td.sheet-equipment_weight_col {
+    width: 50px;
+    display: inline-block;
+    padding: 0px;
+}
+input.sheet-equipment_name {
+    width: 200px;
+}
+input.sheet-equipment_weight {
+    width: 50px;
+}
+input.sheet-equipment_notes {
+    width: 300px;
+}
+input.sheet-money_c {
+    width: 75px;
+}
+input.sheet-money_u {
+    width: 75px;
+}
+.sheet-finances {
+    display: inline-block;
+    width: 150px;
+    border: 1px solid black;
+    padding: 0px;
+    vertical-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+.sheet-picture {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    padding: 0px;
+    text-align: center;
+    vertical-align: center;
+}
+.sheet-picture h4 {
+    margin: 0.2em 0px 0.2em 0px;
+}
+
+.sheet-xp_box {
+    display: inline-block;
+    width: 100px;
+    border: 1px solid black;
+    padding: 0px;
+    vertical-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+.sheet-xp_available, .sheet-xp_used {
+    width: 75px;
+}
+.sheet-xp_box h4 h3 {
+    margin: 0.2em 0px 0.2em 0px;
+}
+
+.sheet-movement_block {
+    border: 1px solid #999;
+    display: inline-block;
+    border-radius: 10px;
+    width: 75px;
+    text-align: center;
+    padding: 5px;
+}
+
+.sheet-movement_input {
+    width: 50px;
+}
+
+.sheet-no_border {
+    border: none;
+}
+input.sheet-difficulty {
+    width: 75px;
+}
+input.sheet-initiative {
+    width: 100px;
+}
+.sheet-characteristic_item_initiative {
+    width: 110px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-block;
+}
+.sheet-weapon_stat {
+    display: inline-block;
+}
+.sheet-weapon_box {
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+}
+.sheet-weapon_notes {
+    width: 400px;
+}
+.sheet-drugs_carried_col {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-drugs_name_col {
+    width: 160px;
+    padding: 5px;
+}
+.sheet-drugs_name {
+    width: 150px;
+    padding: 5px;
+}
+.sheet-drugs_qnty_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-drugs_qnty {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-drugs_uses_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-drugs_uses {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-drugs_weight_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-drugs_addicted {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-drugs_notes_col {
+    width: 310px;
+    padding: 5px;
+}
+.sheet-drugs_notes {
+    width: 300px;
+    padding: 5px;
+}
+.sheet-flux_carried_col {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-flux_name_col {
+    width: 160px;
+    padding: 5px;
+}
+.sheet-flux_name {
+    width: 150px;
+    padding: 5px;
+}
+.sheet-flux_max_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-flux_max {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-flux_flux_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-flux_flux {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-flux_max {
+    width: 50px;
+    padding: 5px;
+}
+
+.sheet-flux_weight_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-flux_weight {
+    width: 50px;
+    padding: 5px;
+}
+
+.sheet-flux_addicted {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-flux_notes_col {
+    width: 310px;
+    padding: 5px;
+}
+.sheet-flux_notes {
+    width: 300px;
+    padding: 5px;
+}
+.sheet-ebbequipment_carried_col {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-ebbequipment_name_col {
+    width: 160px;
+    padding: 5px;
+}
+.sheet-ebbequipment_name {
+    width: 150px;
+    padding: 5px;
+}
+.sheet-ebbequipment_max_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-ebbequipment_max {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-ebbequipment_flux_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-ebbequipment_flux {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-ebbequipment_max {
+    width: 50px;
+    padding: 5px;
+}
+
+.sheet-ebbequipment_weight_col {
+    width: 60px;
+    padding: 5px;
+}
+.sheet-ebbequipment_weight {
+    width: 50px;
+    padding: 5px;
+}
+
+.sheet-ebbequipment_addicted {
+    width: 50px;
+    padding: 5px;
+}
+.sheet-ebbequipment_notes_col {
+    width: 310px;
+    padding: 5px;
+}
+.sheet-ebbequipment_notes {
+    width: 300px;
+    padding: 5px;
+}
+.sheet-spacer {
+    height: 20px;
+}
+r_name {
     width: 200px;
 }
 input.sheet-weapon_modifier {
