@@ -110,7 +110,7 @@
         </div>
 
         <div class='sheet-characteristic_item'>
-            <div class='sheet-characteristic_header'>Damage bonus</div><br />
+            <div class='sheet-characteristic_header'>Damage<br />bonus</div><br />
             <div class='sheet-characteristic_field'>
                 <input type='text' name='attr_damagebonus' class='sheet-characteristic' />
             </div>
@@ -119,6 +119,12 @@
             <div class='sheet-characteristic_header'>Initiative phases</div><br />
             <div class='sheet-characteristic_field'>
                 <input type='text' name='attr_initiative_phases' class='sheet-initiative' />
+            </div>
+        </div>
+        <div class='sheet-characteristic_item_notes'>
+            <div class='sheet-characteristic_header'>Notes</div><br />
+            <div class='sheet-characteristic_field'>
+                <input type='text' name='attr_characteristic_notes' class='sheet-characteristic_notes' />
             </div>
         </div>
     </div>
@@ -1210,6 +1216,7 @@
                     <th class='sheet-drugs_qnty_col'>Quantity</th>
                     <th class='sheet-drugs_uses_col'>uses in month</th>
                     <th class='sheet-drugs_weight_col'>Addicted</th>
+                    <th class='sheet-drugs_addiction_check_col'>addiction check</th>
                     <th class='sheet-drugs_notes_col'>Notes</th>
                 </tr>
             </tbody>
@@ -1232,7 +1239,10 @@
                             <input type='text' name='attr_drugs_uses' class='sheet-drugs_uses' />
                         </td>
                         <td class='sheet-drugs_weight_col'>
-                            <input type='checkbox' name='attr_drugs_addicted' value='1' class='sheet-drugs_addicted' />
+                            <input type='checkbox' name='attr_drugs_addicted' value='1' />
+                        </td>
+                        <td class='sheet-drugs_addiction_check_col'>
+                            <input type='text' name='attr_drugs_addiction_check' class='sheet-drugs_addiction_check' />
                         </td>
                         <td class='sheet-drugs_notes_col'>
                             <input type='text' name='attr_drugs_notes' class='sheet-drugs_notes' />
